@@ -12,6 +12,7 @@ use App\Repository\RefillStationRepository;
 
 /**
  * @Route("/admin", name="admin_")
+ * @IsGranted("ROLE_ADMIN")
  */
 class AdminController extends AbstractController
 {
