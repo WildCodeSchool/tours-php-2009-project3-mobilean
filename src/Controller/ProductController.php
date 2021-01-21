@@ -22,7 +22,8 @@ class ProductController extends AbstractController
     public function home(VehicleRepository $vehicleRepository): Response
     {
         return $this->render('front/product/home.html.twig', [
-            'vehicles' => $vehicleRepository->findAll(),
+            'tourismVehicles' => $vehicleRepository->findByType('Particulier'),
+            'commercialVehicles' => $vehicleRepository->findByType('Utilitaire'),
         ]);
     }
 
