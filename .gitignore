@@ -26,6 +26,11 @@ npm-debug.log
 yarn-error.log
 ###< symfony/webpack-encore-bundle ###
 
+###>assets pdf
+/public/assets/contact
+/public/assets/estimates
+/public/assets/partners
+
 ###>images/uploads
 /public/assets/images/uploads
 /.idea
