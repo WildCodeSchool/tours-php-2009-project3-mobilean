@@ -4,7 +4,7 @@
 <nav class="bg fixed-top">
     <ul class="navbar navbar-expand navbar-light">
         <li>
-            <a class="navbar-brand" href="{{path('product_vehicles')}}">Mobilean</a>
+            <a class="navbar-brand" href="{{path('product_vehicles')}}"><img src="/assets/images/logo.png" class="logoMobilean" alt="logo Mobilean"></a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="{{path('product_vehicles')}}">Nos solutions clés en main</a>
@@ -38,14 +38,6 @@
 {% endblock %}
 
 {% block footer %}
-    <nav class="page-footer fixed-bottom bg-light">
-        <ul class="navbar navbar-expand">
-            <li class="nav-item">
-                <a class="nav-link" href="{{path('contact_message')}}">Contactez-nous</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{path('information_legal')}}">Mentions légales</a>
-            </li>
-        </ul>
-    </nav>
+    <p class="footer-block"> <a class="nav-link" href="{{path('contact_message')}}">Contactez-nous</a></p>
+    <p class="footer-block"><a class="nav-link" href="{{path('information_legal')}}">Mentions légales</a></p>
 {% endblock %}
