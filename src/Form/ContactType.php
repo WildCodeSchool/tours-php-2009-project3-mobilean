@@ -30,7 +30,7 @@ class ContactType extends AbstractType
             ])
 
             ->add('telephone', TelType::class, [
-                'label' => 'Numéro de téléphone (facultatif) : ',
+                'label' => 'Numéro de téléphone (facultatif, 10 chiffres sans espaces) : ',
                 'required' => false,
             ])
 
