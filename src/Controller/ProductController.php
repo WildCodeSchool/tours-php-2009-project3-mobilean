@@ -22,7 +22,8 @@ class ProductController extends AbstractController
     public function home(VehicleRepository $vehicleRepository): Response
     {
         return $this->render('front/product/home.html.twig', [
-            'vehicles' => $vehicleRepository->findAll(),
+            'tourismVehicles' => $vehicleRepository->findByType('Particulier'),
+            'commercialVehicles' => $vehicleRepository->findByType('Utilitaire'),
         ]);
     }
 
@@ -39,7 +40,7 @@ class ProductController extends AbstractController
     }
     /**
      * Displays informations about vehicle
-     * @Route("/vehicle/{id<^[0-9]+$>}", name="vehicle")
+     * @Route("/vehicule/{id<^[0-9]+$>}", name="vehicle")
      * @return Response
      */
     public function vehicle(VehicleRepository $vehicleRepository, int $id): Response
