@@ -24,6 +24,8 @@ class EstimateIndividuals
 
     /**
      * @Assert\NotBlank()
+     * @Assert\Regex(pattern="/^[0-9]+$/")
+     * @Assert\Length(min=10, max=10)
      */
     private string $telephone;
 
