@@ -43,7 +43,7 @@ class RefillStation
 
     /**
      * @ORM\Column(type="string", length=100, nullable=true)
-     * @Assert\Choice({"Intérieure", "Extérieure", "Les deux"})
+     * @Assert\Choice({"Intérieure", "Extérieure", "Intérieure et Extérieure"})
      */
     private ?string $installation;
 

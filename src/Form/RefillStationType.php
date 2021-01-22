@@ -34,7 +34,7 @@ class RefillStationType extends AbstractType
                 'choices' => [
                     'Intérieure' => 'Intérieure',
                     'Extérieure' => 'Extérieure',
-                    'Les deux' => 'Les deux'
+                    'Intérieure et Extérieure' => 'Intérieure et Extérieure'
                 ],
                 'label' => 'Choix de l\'installation : ',
                 'expanded' => true,
