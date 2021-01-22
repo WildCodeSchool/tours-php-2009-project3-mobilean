@@ -44,7 +44,16 @@ class ContactController extends AbstractController
             $contact->setType('contact');
 
             // generate pdf
-            $filename = 'demande-' . uniqid() . '.pdf';
+            $filename = 'Demande d\'Informations - ' . $contact->getFullName();
+            // check if filename already exists
+            $testFilename = $filename;
+            $counter = 1;
+            while (file_exists('assets/contact/' . $testFilename . '.pdf')) {
+                $testFilename = $filename . '(' . $counter . ')';
+                $counter++;
+            }
+            $filename = $testFilename . '.pdf';
+
             $pdf->generateFromHtml(
                 $this->renderView(
                     'pdf.html.twig',
@@ -85,16 +94,25 @@ class ContactController extends AbstractController
         $estimateIndividuals = new EstimateIndividuals();
         $formIndividuals = $this->createForm(EstimateIndividualsType::class, $estimateIndividuals);
         $formIndividuals->handleRequest($request);
-
         if ($formIndividuals->isSubmitted() && $formIndividuals->isValid()) {
             // add date of message submission
             $estimateIndividuals->setSubmitDate(new DateTime('now'));
-
             // add type of message (for after_submit view purposes)
             $estimateIndividuals->setType('estimateIndividuals');
 
             // generate pdf
-            $filename = 'demande-devis-' . uniqid() . '.pdf';
+            $filename = 'Demande de Devis - '
+                . $estimateIndividuals->getFirstName()
+                . ' '
+                . $estimateIndividuals->getLastName();
+            // check if filename already exists
+            $testFilename = $filename;
+            $counter = 1;
+            while (file_exists('assets/estimates/' . $testFilename . '.pdf')) {
+                $testFilename = $filename . '(' . $counter . ')';
+                $counter++;
+            }
+            $filename = $testFilename . '.pdf';
             $pdf->generateFromHtml(
                 $this->renderView(
                     'pdf.html.twig',
@@ -102,7 +120,6 @@ class ContactController extends AbstractController
                 ),
                 'assets/estimates/' . $filename
             );
-
             // send mail
             $email = (new Email())
                 ->from('email_from@example.com')
@@ -125,16 +142,22 @@ class ContactController extends AbstractController
         $estimateCompanies = new EstimateCompanies();
         $formCompanies = $this->createForm(EstimateCompaniesType::class, $estimateCompanies);
         $formCompanies->handleRequest($request);
-
         if ($formCompanies->isSubmitted() && $formCompanies->isValid()) {
             // add date of message submission
             $estimateCompanies->setSubmitDate(new DateTime('now'));
-
             // add type of message (for after_submit view purposes)
             $estimateCompanies->setType('estimateCompanies');
 
             // generate pdf
-            $filename = 'demande-devis-' . uniqid() . '.pdf';
+            $filename = 'Demande de Devis - ' . $estimateCompanies->getBusinessName();
+            // check if filename already exists
+            $testFilename = $filename;
+            $counter = 1;
+            while (file_exists('assets/estimates/' . $testFilename . '.pdf')) {
+                $testFilename = $filename . '(' . $counter . ')';
+                $counter++;
+            }
+            $filename = $testFilename . '.pdf';
             $pdf->generateFromHtml(
                 $this->renderView(
                     'pdf.html.twig',
@@ -142,7 +165,6 @@ class ContactController extends AbstractController
                 ),
                 'assets/estimates/' . $filename
             );
-
             // send mail
             $email = (new Email())
                 ->from('email_from@example.com')
@@ -185,7 +207,15 @@ class ContactController extends AbstractController
             $partner->setType('partner');
 
             // generate pdf
-            $filename = 'demande-partenariat-' . uniqid() . '.pdf';
+            $filename = 'Demande de Partenariat - ' . $partner->getBusinessName();
+            // check if filename already exists
+            $testFilename = $filename;
+            $counter = 1;
+            while (file_exists('assets/partners/' . $testFilename . '.pdf')) {
+                $testFilename = $filename . '(' . $counter . ')';
+                $counter++;
+            }
+            $filename = $testFilename . '.pdf';
             $pdf->generateFromHtml(
                 $this->renderView(
                     'pdf.html.twig',

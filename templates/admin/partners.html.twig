@@ -6,4 +6,15 @@
 
 {% block body %}
 <h1>Demandes de Partenariat</h1>
+
+<ul>
+{% for partner in partners %}
+    <li>
+        <a href="{{ asset(partner.pathname) }}" target="blank">{{ partner.filename }}</a>
+        <form method="post" action="{{ path('admin_delete_partner', {'filename': partner.filename|url_encode}) }}" onsubmit="return confirm('Etes vous sur de vouloir supprimer ce document?');">
+            <button class="btn btn-danger">Supprimer</button>
+        </form>
+    </li>
+{% endfor %}
+</ul>
 {% endblock %}
