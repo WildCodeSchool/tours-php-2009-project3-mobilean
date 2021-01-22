@@ -40,7 +40,7 @@ class ProductController extends AbstractController
     }
     /**
      * Displays informations about vehicle
-     * @Route("/vehicle/{id<^[0-9]+$>}", name="vehicle")
+     * @Route("/vehicule/{id<^[0-9]+$>}", name="vehicle")
      * @return Response
      */
     public function vehicle(VehicleRepository $vehicleRepository, int $id): Response
