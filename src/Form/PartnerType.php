@@ -51,7 +51,7 @@ class PartnerType extends AbstractType
             ])
 
             ->add('telephone', TelType::class, [
-                'label' => 'Téléphone de la personne à contacter : ',
+                'label' => 'Téléphone de la personne à contacter (10 chiffres sans espaces) : ',
             ])
 
             ->add('email', EmailType::class, [

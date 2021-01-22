@@ -53,6 +53,7 @@ class ContactController extends AbstractController
                 $counter++;
             }
             $filename = $testFilename . '.pdf';
+
             $pdf->generateFromHtml(
                 $this->renderView(
                     'pdf.html.twig',
