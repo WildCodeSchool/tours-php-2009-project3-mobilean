@@ -36,7 +36,7 @@ footer .nav-link-footer {
     color:#00925b;
     margin: 10em;
 }
-
+/* For computers */
 @media screen and (min-width : 1024px) {
     .nav-link {
         color:#00925b;
@@ -48,11 +48,11 @@ footer .nav-link-footer {
         width: 6vw;
     }
     footer {
-    display: flex;
-    justify-content: center;
-    bottom: 0;
-    width: 100%;
-    margin-top: 4rem;
-    background-color: #F4F5F6;
-}
+        display: flex;
+        justify-content: center;
+        bottom: 0;
+        width: 100%;
+        margin-top: 4rem;
+        background-color: #F4F5F6;
+    }
 }

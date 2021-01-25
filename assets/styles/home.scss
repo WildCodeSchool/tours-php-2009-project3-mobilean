@@ -1,6 +1,7 @@
-// For smartphones and tablet
+/* For smartphones and tablet */
 
-//Icons
+/* Icons */
+
 .presentation-rental {
     margin-top: 20px;
     padding: 15px;
@@ -36,7 +37,7 @@
     font-size: 30px;
 }
 
-//Articles
+/* Articles */
 .presentation-container {
     display: flex;
     margin-top: 100px;
@@ -71,7 +72,7 @@
     color:#00925b;
 }
 
- //Carousel 
+/* Carousel */
  .section-vehicle{
     background-color:#f4f5f6;
     padding-bottom: 40px;
@@ -113,8 +114,8 @@
     height: 40vw;
 }
 
-// For computers
-@media screen and (min-width : 1112px) {
+/* For computers */
+@media screen and (min-width : 1024px) {
     .carousel {
         margin: auto;
         box-shadow: 2px 2px 2px grey;
