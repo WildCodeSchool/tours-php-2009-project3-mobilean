@@ -63,7 +63,12 @@ class AdminController extends AbstractController
      */
     public function estimates(): Response
     {
-        $estimates = new FilesystemIterator('assets/estimates');
+        try {
+            $estimates = new FilesystemIterator('assets/estimates');
+        } catch (\Exception $e) {
+            $estimates = [];
+        }
+
         return $this->render('admin/estimates.html.twig', [
             'estimates' => $estimates,
         ]);
@@ -76,7 +81,11 @@ class AdminController extends AbstractController
      */
     public function partners(): Response
     {
-        $partners = new FilesystemIterator('assets/partners');
+        try {
+            $partners = new FilesystemIterator('assets/partners');
+        } catch (\Exception $e) {
+            $partners = [];
+        }
 
         return $this->render('admin/partners.html.twig', [
             'partners' => $partners,
