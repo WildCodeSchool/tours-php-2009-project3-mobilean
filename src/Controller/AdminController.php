@@ -29,7 +29,29 @@ class AdminController extends AbstractController
      */
     public function home(): Response
     {
-        return $this->render('admin/home.html.twig');
+        try {
+            $estimates = new FilesystemIterator('assets/estimates');
+        } catch (\Exception $e) {
+            $estimates = [];
+        }
+
+        try {
+            $partners = new FilesystemIterator('assets/partners');
+        } catch (\Exception $e) {
+            $partners = [];
+        }
+
+        try {
+            $contacts = new FilesystemIterator('assets/contact');
+        } catch (\Exception $e) {
+            $contacts = [];
+        }
+
+        return $this->render('admin/home.html.twig', [
+            'estimates' => $estimates,
+            'partners' => $partners,
+            'contacts' => $contacts,
+        ]);
     }
 
     /**
@@ -57,7 +79,7 @@ class AdminController extends AbstractController
     }
 
     /**
-     * Displays the page for a quote request
+     * Displays the page for quotes requests
      * @Route("/demandes-de-devis", name="estimates")
      * @return Response
      */
@@ -75,7 +97,7 @@ class AdminController extends AbstractController
     }
 
     /**
-     * Displays the page for a partnership request
+     * Displays the page for partnership requests
      * @Route("/demandes-de-partenariat", name="partners")
      * @return Response
      */
@@ -89,6 +111,24 @@ class AdminController extends AbstractController
 
         return $this->render('admin/partners.html.twig', [
             'partners' => $partners,
+        ]);
+    }
+
+    /**
+     * Displays the page for information requests
+     * @Route("/demandes-informations", name="contact")
+     * @return Response
+     */
+    public function contact(): Response
+    {
+        try {
+            $contacts = new FilesystemIterator('assets/contact');
+        } catch (\Exception $e) {
+            $contacts = [];
+        }
+
+        return $this->render('admin/contact.html.twig', [
+            'contacts' => $contacts,
         ]);
     }
 
