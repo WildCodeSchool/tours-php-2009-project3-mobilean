@@ -36,8 +36,12 @@ It's symfony website-skeleton project with some additional tools to validate cod
 4. Run `yarn encore dev` to build assets
 5. Create `.env.local` from the already existing `.env` file
 6. Configure the MAILER_DSN with your information in .env.local file
-7. Configure the DATABSE_URL with your information in .env.local file
-8. Configure the WKHTMLTOPDF_PATH and WKHTMLTOIMAGE_PATH in .env.local file
+7. Configure the WKHTMLTOPDF_PATH and WKHTMLTOIMAGE_PATH in .env.local file
+8. Configure the DATABSE_URL with your information in .env.local file
+9. Run `symfony console d:d:d --force`, then run `symfony console d:d:c` to create the database
+10. Run `symfony console d:m:m` to run migrations
+11. Run `symfony server:start` and open your project
+12. Go to `/admin` or `/register-first-user` and create the initial admin user with your email and password
 
 ### Working
 
