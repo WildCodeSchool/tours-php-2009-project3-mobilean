@@ -1,0 +1,55 @@
+{% extends 'admin/admin_layout.html.twig' %}
+
+{% block title %}{{ parent() }} - Admin - Borne de recharge{% endblock %}
+
+{% block body %}
+    <h1>Borne de recharge</h1>
+
+    <table class="table-show-refill table table-hover">
+        <tbody>
+            <tr>
+                <th scope="col">Id</th>
+                <td>{{ refillStation.id }}</td>
+            </tr>
+            <tr>
+                <th scope="col">Nom</th>
+                <td>{{ refillStation.name }}</td>
+            </tr>
+            <tr>
+                <th scope="col">Description</th>
+                <td>{{ refillStation.description }}</td>
+            </tr>
+            <tr>
+                <th scope="col">Debit</th>
+                <td>{{ refillStation.debit }}</td>
+            </tr>
+            <tr>
+                <th scope="col">Installation</th>
+                <td>{{ refillStation.installation }}</td>
+            </tr>
+            <tr>
+                <th scope="col">Temps de recharge</th>
+                <td>{{ refillStation.refillTime }}</td>
+            </tr>
+            <tr>
+                <th scope="col">Stockage supplémentaire</th>
+                <td>{{ refillStation.additionalStorage ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th scope="col">Photo</th>
+                <td>{{ refillStation.photo }}</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <th>
+                <a href="{{ path('admin_charging_stations') }}">Retour sur les bornes</a>
+            </th>
+        </tfoot>
+    </table>
+
+    <div class="button-action">
+        <a class="btn btn-success"href="{{ path('admin_charging_station_edit', {'id': refillStation.id}) }}" role="button">Modifier</a>
+        {{ include('admin/charging_station_delete_form.html.twig') }}
+    </div>
+    
+{% endblock %}

@@ -1,0 +1,43 @@
+{# This is the page that will allow admins to see the charging stations' catalog #}
+
+{% extends 'admin/admin_layout.html.twig' %}
+
+{% block title %}{{ parent() }} - Admin - Catalogue des bornes {% endblock %}
+
+{% block body %}
+<h1>Catalogue de Bornes de Recharge</h1>
+<table class="table-refill table table-hover"> 
+        <thead>
+            <tr>
+                <th scope="col">Nom</th>
+                <th scope="col">Description</th>
+                <th scope="col">Debit</th>
+                <th scope="col">Installation</th>
+                <th scope="col">Temps de recharge</th>
+                <th scope="col">Photo</th>
+                <th scope="col">actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for refillStation in refillStations %}
+            <tr>
+                <td>{{ refillStation.name }}</td>
+                <td>{{ refillStation.description }}</td>
+                <td>{{ refillStation.debit }}</td>
+                <td>{{ refillStation.installation }}</td>
+                <td>{{ refillStation.refillTime }}</td>
+                <td>{{ refillStation.photo }}</td>
+                <td>
+                    <a class="btn btn-outline-info" href="{{ path('admin_charging_station_show', {'id': refillStation.id}) }}" roles="button">Details</a>
+                    <a class="btn btn-outline-info" href="{{ path('admin_charging_station_edit', {'id': refillStation.id}) }}" roles="button">Modifier</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="9">Aucune bornes trouvée</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <a class=" btn-add btn btn-success"href="{{ path('admin_charging_station_new') }}" role="button">Ajouter</a>
+{% endblock %}

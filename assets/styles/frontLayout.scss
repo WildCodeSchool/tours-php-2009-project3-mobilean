@@ -1,0 +1,60 @@
+.navbar {
+    list-style-type: none;
+    box-shadow: 2px 2px 2px gray,
+    -1px -1px 2px white;
+    background-color: #F4F5F6;
+}
+
+.logoMobilean {
+    height: 2vh;
+    width: 6vh;
+}
+
+.nav-link {
+    color:#00925b;
+    font-size: 3em;
+    padding: 0.5em;
+    margin-left: 3em;
+}
+
+.navbar-toggler {
+    background-color: #548235;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+    width: 100%;
+    margin-top: 4rem;
+    box-shadow: 4px 4px 4px gray,
+    -1px -1px 2px white;
+    background-color: #F4F5F6;
+}
+
+footer .nav-link-footer {
+    color:#00925b;
+    margin: 10em;
+}
+
+/* For computers */
+@media screen and (min-width : 1024px) {
+    .nav-link {
+        color:#00925b;
+        font-size: 1em;
+    }
+
+    .logoMobilean {
+        height: 4vh;
+        width: 6vw;
+    }
+
+    footer {
+        display: flex;
+        justify-content: center;
+        bottom: 0;
+        width: 100%;
+        margin-top: 4rem;
+        background-color: #F4F5F6;
+    }
+}

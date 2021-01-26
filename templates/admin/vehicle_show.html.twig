@@ -1,0 +1,73 @@
+{% extends 'admin/admin_layout.html.twig' %}
+
+{% block title %}{{ parent() }} - Admin - Le véhicule{% endblock %}
+
+{% block body %}
+    <h1>Détail du véhicule</h1>
+
+    <table class="table-show-vehicle table table-hover">
+        <tbody>
+            <tr>
+                <th scope="col">Id</th>
+                <td>{{ vehicle.id }}</td>
+            </tr>
+            <tr>
+                <th scope="col">Nom</th>
+                <td>{{ vehicle.name }}</td>
+            </tr>
+            <tr>
+                <th scope="col">Description</th>
+                <td>{{ vehicle.description }}</td>
+            </tr>
+            <tr>
+                <th scope="col">Type de véhicule</th>
+                <td>{{ vehicle.type }}</td>
+            </tr>
+            <tr>
+                <th scope="col">Puissance fiscale</th>
+                <td>{{ vehicle.fiscalPower }}</td>
+            </tr>
+            <tr>
+                <th scope="col">Puissance réelle</th>
+                <td>{{ vehicle.actualPower }}</td>
+            </tr>
+            <tr>
+                <th scope="col">Capacité réservoir GNV</th>
+                <td>{{ vehicle.tankCapacityCNG }}</td>
+            </tr>
+            <tr>
+                <th scope="col">Consommation GNV</th>
+                <td>{{ vehicle.consumptionCNG }}</td>
+            </tr>
+            <tr>
+                <th scope="col">Capacité carburant</th>
+                <td>{{ vehicle.tankCapacityFuel }}</td>
+            </tr>
+            <tr>
+                <th scope="col">Consommation carburant</th>
+                <td>{{ vehicle.consumptionFuel }}</td>
+            </tr>
+            <tr>
+                <th scope="col">Autonomie</th>
+                <td>{{ vehicle.autonomy }}</td>
+            </tr>
+            <tr>
+                <th scope="col">Vol.compartiment arrière</th>
+                <td>{{ vehicle.rearVolume }}</td>
+            </tr>
+            <tr>
+                <th scope="col">Photo</th>
+                <td>{{ vehicle.photo }}</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <th>
+                <a href="{{ path('admin_vehicles') }}">Retour sur les véhicules</a>
+            </th>
+        </tfoot>
+    </table>
+    <div class="button-action">
+        <a class="btn btn-success"href="{{ path('admin_vehicle_edit', {'id': vehicle.id}) }}" role="button">Modifier</a>
+        {{ include('admin/vehicle_delete_form.html.twig') }}
+    </div>
+{% endblock %}

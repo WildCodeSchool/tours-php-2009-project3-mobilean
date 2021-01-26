@@ -1,0 +1,43 @@
+{# This is the page that will allow admins to see the vehicles' catalog #}
+
+{% extends 'admin/admin_layout.html.twig' %}
+
+{% block title %}{{ parent() }} - Admin - Catalogue des véhicules{{ parent() }}{% endblock %}
+
+{% block body %}
+<h1>Catalogue des véhicules</h1>
+    <table class="table-vehicle table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Nom</th>
+                <th scope="col">Description</th>
+                <th scope="col">Type de véhicule</th>
+                <th scope="col">Puissance fiscale</th>
+                <th scope="col">Puissance réelle</th>
+                <th scope="col">Photo</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for vehicle in vehicles %}
+            <tr>
+                <td>{{ vehicle.name }}</td>
+                <td>{{ vehicle.description }}</td>
+                <td>{{ vehicle.type }}</td>
+                <td>{{ vehicle.fiscalPower }}</td>
+                <td>{{ vehicle.actualPower }}</td>
+                <td>{{ vehicle.photo }}</td>
+                <td>
+                    <a class="btn btn-outline-info" href="{{ path('admin_vehicle_show', {'id': vehicle.id}) }}" roles="button">Détails</a>
+                    <a class="btn btn-outline-info"href="{{ path('admin_vehicle_edit', {'id': vehicle.id}) }}" roles="button">Modifier</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="14">Aucun enregistrement trouvé</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <a class="btn-add btn btn-success"href="{{ path('admin_vehicle_new') }}" roles="button">Ajouter</a>
+{% endblock %}

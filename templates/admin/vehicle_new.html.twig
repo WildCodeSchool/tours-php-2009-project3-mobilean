@@ -1,0 +1,11 @@
+{% extends 'admin/admin_layout.html.twig' %}
+
+{% block title %}{{ parent() }} - Admin - Nouveau véhicule{% endblock %}
+
+{% block body %}
+    <h1>Ajouter un nouveau véhicule</h1>
+        <div class="page-form-edit">
+            {{ include('admin/vehicle_form.html.twig') }}
+            <a href="{{ path('admin_vehicles') }}">Retour sur les véhicules</a>
+        </div>
+{% endblock %}

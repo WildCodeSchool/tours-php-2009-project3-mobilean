@@ -1,8 +1,8 @@
-# Project 3 - Starter Kit - Symfony 5.*
+# Project 3 - Mobilean - Symfony 5.*
 
 ![Wild Code School](https://wildcodeschool.fr/wp-content/uploads/2019/01/logo_pink_176x60.png)
 
-This starter kit is here to easily start a repository for your students.
+This starter kit is used to develop a web application for 'Mobilean'.
 
 It's symfony website-skeleton project with some additional tools to validate code standards.
 
@@ -11,7 +11,7 @@ It's symfony website-skeleton project with some additional tools to validate cod
     * PHP_CodeSniffer to check PSR12 
     * PHPStan focuses on finding errors in your code (without actually running it)
     * PHPmd will check if you follow PHP best practices
-     
+
   If tests fail, the commit is canceled and a warning message is displayed to developper.
 
 * Github Action as Continuous Integration will be run when a branch with active pull request is updated on github. It will run :
@@ -26,6 +26,7 @@ It's symfony website-skeleton project with some additional tools to validate cod
 
 1. Check composer is installed
 2. Check yarn & node are installed
+3. Check if wkhtmltopdf is installed
 
 ### Install
 
@@ -33,6 +34,10 @@ It's symfony website-skeleton project with some additional tools to validate cod
 2. Run `composer install`
 3. Run `yarn install`
 4. Run `yarn encore dev` to build assets
+5. Create `.env.local` from the already existing `.env` file
+6. Configure the MAILER_DSN with your information in .env.local file
+7. Configure the DATABSE_URL with your information in .env.local file
+8. Configure the WKHTMLTOPDF_PATH and WKHTMLTOIMAGE_PATH in .env.local file
 
 ### Working
 
@@ -67,12 +72,11 @@ If you develop on Windows, you should edit you git configuration to change your 
 
 Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
 
-## Versioning
-
-
 ## Authors
 
 Wild Code School trainers team
+&
+Yusuf Celik, Kévin Francisco, Lucy Merlier and Yann Raulet.
 
 ## License
 
@@ -97,6 +101,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-## Acknowledgments
-

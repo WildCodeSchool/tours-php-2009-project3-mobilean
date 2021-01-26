@@ -1,0 +1,110 @@
+{# This is the home page that will display the vehicles' catalog #}
+
+{% extends 'front/front_layout.html.twig' %}
+
+{% block title %}Accueil - {{ parent() }} {% endblock %}
+
+{% block body %}
+
+    <section class="presentation-rental">
+        <div> 
+            <h2 class="Offerpresentation">Nos offres clé en main en location longue durée</h2>
+            <hr>
+            <ul class="vehicle-list">
+                <li class="vehicle-detail-left"><img src="/assets/images/car.png" class="" alt="picture car"></li>
+                <li class="vehicle-detail-right"><img src="/assets/images/petrol.png" class="" alt="picture refillstation"></li>
+                <li class="vehicle-detail-left" id="vehicle-right">Un véhicule particulier ou utilitaire :</li>
+                <li class="vehicle-detail-right" id="vehicle-left">Une borne de recharge :</li>
+                <li class="vehicle-detail-left">équipé d'origine au GNV par le constructeur</li>
+                <li class="vehicle-detail-right">installée sur votre réseau de Gaz Naturel domestique</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="presentation-container">
+        <div class="presentation-first-text">
+            <h2>Pourquoi rouler au GNV et Bio-GNV  ?</h2>
+            <hr>
+            <p >
+                L'hydrocarbure renouvelable le plus simple à bio-synthétiser
+                Le GNV (Gaz Naturel pour Véhicules) est un carburant alternatif à l’essence et au diesel pour les véhicules thermiques.
+                Il est principalement constitué de méthane.
+                Le méthane est l'hydrocarbure que l’Homme sait le plus facilement bio-synthétiser, à partir de déchets organiques.
+                Lorsqu’il est produit de manière renouvelable et biosourcé, on parle de biométhane ou BioGNV.
+                Chez Mobilean, on parle de Gaz Vert pour Véhicules®..
+            </p>
+        </div>
+        <img src="/assets/images/carLeaves.jpg" class="presentation-picture" alt="picture car"></li>    
+    </section>
+
+    <section class="presentation-container">
+        <img src="/assets/images/environnemental.jpg" class="presentation-picture" alt="picture car"></li>    
+        <div class="presentation-second-text">
+            <h2>Une technologie éprouvée</h2>
+            <hr>
+            <p>
+                Le Gaz Naturel pour véhicules réduit de 95% les rejets de particules (notamment Dioxydes d'azotes et autres NOx)
+                par rapport aux autres motorisations thermiques, tout en conservant une autonomie comparable.
+                Les véhicules roulant au GNV sont donc éligibles à la vignette Crit'Air 1 et ne souffrent d'aucune restriction de circulation
+                dans les Zones à Faibles Emissions (ZFE). Lorsqu'elle utilise du Gaz Vert pour Véhicules®, la mobilité au gaz naturel est d'ailleurs
+                celle qui affiche, sur l'ensemble de son cycle de vie, le plus faible bilan carbone.
+            </p>
+        </div>
+    </section>
+
+    <section class="section-vehicle">
+        <h2 class="vehicle-type">Les véhicules utilitaires</h2>
+        <hr>
+        <div id="carouselCommercialVehicles" class="carousel" data-interval="false" data-ride="carousel">
+            <ol class="carousel-indicators">
+                {% for vehicle in commercialVehicles %}
+                        <li data-target="#carouselCommercialVehicles" data-slide-to="{{ loop.index-1 }}" class="{{ loop.first ? 'active': '' }} "></li>
+                {% endfor %}
+            </ol>
+            <div class="carousel-inner">
+                {% for vehicle in commercialVehicles %}
+                    <div class="carousel-item {{ loop.first ? 'active': '' }} ">
+                        <h4>{{ vehicle.name }}</h4>
+                        <a href="{{ path('product_vehicle', { id : vehicle.id }) }}"><img class="d-block w-100" src=" /assets/images/uploads/{{ vehicle.photo }}" alt="Photo du véhicule"></a>
+                    </div>
+                {% endfor %}
+            </div>
+            <a class="carousel-control-prev" href="#carouselCommercialVehicles" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselCommercialVehicles" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </section>
+
+    <section class="section-vehicle">
+        <h2 class="vehicle-type">Les véhicules particuliers</h2>
+        <hr>
+        <div id="carouselPrivateVehicles" class="carousel" data-interval="false" data-ride="carousel">
+            <ol class="carousel-indicators">
+                {% for vehicle in tourismVehicles %}
+                        <li data-target="#carouselPrivateVehicles" data-slide-to="{{ loop.index-1 }}" class="{{ loop.first ? 'active': '' }} "></li>
+                {% endfor %}
+            </ol>
+            <div class="carousel-inner">
+                {% for vehicle in tourismVehicles %}
+                    <div class="carousel-item {{ loop.first ? 'active': '' }} ">
+                        <h4>{{ vehicle.name }}</h4>
+                        <a href="{{ path('product_vehicle', { id : vehicle.id }) }}"><img class="d-block w-100" src=" /assets/images/uploads/{{ vehicle.photo }}" alt="Photo du véhicule"></a>
+                    </div>
+                {% endfor %}
+            </div>
+            <a class="carousel-control-prev" href="#carouselPrivateVehicles" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselPrivateVehicles" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </section>
+{% endblock %}

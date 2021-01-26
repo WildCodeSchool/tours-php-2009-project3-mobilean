@@ -1,0 +1,11 @@
+{% extends 'admin/admin_layout.html.twig' %}
+
+{% block title %}{{ parent() }} - Nouveau véhicule{% endblock %}
+
+{% block body %}
+    <h1>Ajouter une nouvelle borne de recharge</h1>
+        <div class="page-form-edit">
+            {{ include('admin/charging_station_form.html.twig') }}
+            <a href="{{ path('admin_charging_stations') }}">Retour sur les bornes</a>
+        <div>
+{% endblock %}

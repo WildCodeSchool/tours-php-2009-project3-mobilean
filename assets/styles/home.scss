@@ -1,0 +1,125 @@
+/* For smartphones and tablet */
+
+/* Icons */
+
+.presentation-rental {
+    margin-top: 20px;
+    padding: 15px;
+    text-align: center;
+    background-color: #f4f5f6;
+}
+
+.Offerpresentation{
+    font-size: 40px;
+    color:#00925b;
+}
+
+.vehicle-list {
+    display: grid;
+    list-style: none;
+}
+
+.vehicle-detail-left{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.vehicle-detail-right {
+    grid-column-start: 3;
+    grid-column-end: 6;
+}
+
+#vehicle-right {
+    font-size: 30px;
+}
+
+#vehicle-left {
+    font-size: 30px;
+}
+
+/* Articles */
+.presentation-container {
+    display: flex;
+    margin-top: 100px;
+}
+
+.presentation-picture {
+    flex: 2;
+    height: 25vh;
+    width: 25vw;
+    box-shadow: 4px 4px 4px 1px gray,
+}
+
+.presentation-first-text {
+    flex: 4;
+    margin: auto; 
+    padding-right: 4em;
+    text-align: justify; 
+}
+
+.presentation-first-text h2{
+    color:#00925b;
+}
+
+.presentation-second-text {
+    flex: 4;
+    margin: auto; 
+    padding-left: 4em;
+    text-align: justify; 
+}
+
+.presentation-second-text h2{
+    color:#00925b;
+}
+
+/* Carousel */
+.section-vehicle{
+    background-color:#f4f5f6;
+    padding-bottom: 40px;
+ }
+
+.vehicle-type {
+    margin-top: 200px;
+    font-size: 40px;
+    color:#00925b;
+    text-align: center;
+    background-color: #f4f5f6;
+}
+
+.carousel {
+    margin: auto;
+    box-shadow: 2px 2px 2px grey;
+    background-color: #F2F4F1;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    height: 50px;
+    width: 50px;
+}
+
+.carousel-control-next {
+    filter: invert(100%);
+}
+
+.carousel-control-prev {
+    filter: invert(100%);
+}
+
+.carousel-inner h4 {
+    text-align: center;
+}
+
+.d-block.w-100 {
+    height: 40vw;
+}
+
+/* For computers */
+@media screen and (min-width : 1024px) {
+    .carousel {
+        margin: auto;
+        box-shadow: 2px 2px 2px grey;
+        width: 60%;
+        border-radius: 10px;
+    }
+}

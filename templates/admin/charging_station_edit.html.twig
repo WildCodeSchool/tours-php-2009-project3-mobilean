@@ -1,0 +1,17 @@
+{% extends 'admin/admin_layout.html.twig' %}
+
+{% block title %}{{ parent() }} - Admin - Modifier une borne de recharge{% endblock %}
+
+{% block body %}
+    <h1>Modifier la borne de recharge</h1>
+        <div class="page-form-edit">
+            <div class="form-edit">
+                {{ include('admin/charging_station_form.html.twig') }}
+            </div>
+            <div class="form-edit">
+                {{ include('admin/charging_station_delete_form.html.twig') }}
+            </div>
+            <a href="{{ path('admin_charging_stations') }}">Retour sur les bornes</a>
+        </div>
+    
+{% endblock %}
