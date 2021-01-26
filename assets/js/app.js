@@ -12,6 +12,7 @@ import '../styles/refillStations.scss';
 import '../styles/vehicle.scss';
 import '../styles/frontLayout.scss';
 import '../styles/adminCrud.scss';
+import '../styles/estimates.scss';
 
 // Need jQuery? Install it with "yarn add jquery", then uncomment to import it.
 // import $ from 'jquery';
