@@ -1,72 +1,22 @@
-// For smartphones and tablets
-.presentation-text {
-    margin: 50px 0;
-    padding: 10px;
-    text-align: justify;
-    box-shadow: 2px 2px 2px gray,
-    -1px -1px 2px white;
-    background-color: #F2F4F1;
-}
+/* For smartphones and tablet */
+
+/* Icons */
 
 .presentation-rental {
-    margin-top: 100px;
+    margin-top: 20px;
+    padding: 15px;
     text-align: center;
-    box-shadow: 2px 2px 2px gray,
-    -1px -1px 2px white;
-    background-color: #F2F4F1;
-    padding-bottom: 10px;
+    background-color: #f4f5f6;
 }
 
 .Offerpresentation{
     font-size: 40px;
-    color: #548235;
-}
-
-.vehicle-type {
-    margin: 120px 0 50px 0;
-    text-align: center;
-    font-size: 40px;
-    padding: 10px;
-    box-shadow: 2px 2px 2px gray,
-    -1px -1px 2px white;
-    background-color: #F2F4F1;
-    color: #548235;
-}
-
-.carousel {
-    margin: auto;
-    padding: 10px;
-    box-shadow: 2px 2px 2px gray,
-    -1px -1px 2px white;
-    background-color: #F2F4F1;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    height: 50px;
-    width: 50px;
-}
-
-.carousel-control-next {
-    filter: invert(100%);
-}
-
-.carousel-control-prev {
-    filter: invert(100%);
-}
-
-section h3 {
-    padding-bottom: 50px;
+    color:#00925b;
 }
 
 .vehicle-list {
     display: grid;
     list-style: none;
-}
-
-.vehicle-list h4 {
-    text-align: center;
-    margin-bottom: 30px;
 }
 
 .vehicle-detail-left{
@@ -87,31 +37,89 @@ section h3 {
     font-size: 30px;
 }
 
-.carousel-inner h4 {
-    text-align: center;
+/* Articles */
+.presentation-container {
+    display: flex;
+    margin-top: 100px;
 }
 
-.presentation {
-    margin-top: 100px;
+.presentation-picture {
+    flex: 2;
+    height: 25vh;
+    width: 25vw;
+    box-shadow: 4px 4px 4px 1px gray,
+}
+
+.presentation-first-text {
+    flex: 4;
+    margin: auto; 
+    padding-right: 4em;
+    text-align: justify; 
+}
+
+.presentation-first-text h2{
+    color:#00925b;
+}
+
+.presentation-second-text {
+    flex: 4;
+    margin: auto; 
+    padding-left: 4em;
+    text-align: justify; 
+}
+
+.presentation-second-text h2{
+    color:#00925b;
+}
+
+/* Carousel */
+.section-vehicle{
+    background-color:#f4f5f6;
+    padding-bottom: 40px;
+ }
+
+.vehicle-type {
+    margin-top: 200px;
+    font-size: 40px;
+    color:#00925b;
     text-align: center;
-    box-shadow: 2px 2px 2px gray,
-    -1px -1px 2px white;
+    background-color: #f4f5f6;
+}
+
+.carousel {
+    margin: auto;
+    box-shadow: 2px 2px 2px grey;
     background-color: #F2F4F1;
-    padding-bottom: 10px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    height: 50px;
+    width: 50px;
+}
+
+.carousel-control-next {
+    filter: invert(100%);
+}
+
+.carousel-control-prev {
+    filter: invert(100%);
+}
+
+.carousel-inner h4 {
+    text-align: center;
 }
 
 .d-block.w-100 {
     height: 40vw;
 }
 
-// For computers
-@media screen and (min-width : 1112px) {
+/* For computers */
+@media screen and (min-width : 1024px) {
     .carousel {
         margin: auto;
-        padding: 10px;
-        box-shadow: 2px 2px 2px gray,
-        -1px -1px 2px white;
-        background-color: #F2F4F1;
-        width: 80%;
+        box-shadow: 2px 2px 2px grey;
+        width: 60%;
+        border-radius: 10px;
     }
 }
