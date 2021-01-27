@@ -17,7 +17,6 @@ use App\Form\EstimateCompaniesType;
 use App\DataClass\EstimateCompanies;
 use App\Form\ContactType;
 use App\DataClass\Contact;
-use App\Repository\PartnerRepository;
 use DateTime;
 
 /**

@@ -5,7 +5,7 @@ namespace App\Controller;
 use App\Controller\FrontController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use App\Repository\PartnerRepository;
+use App\Repository\LegalMentionRepository;
 
 /**
  * Creates complementary views
@@ -28,8 +28,10 @@ class InformationController extends FrontController
      * @Route("/mentions-legales", name="legal")
      * @return Response
      */
-    public function legal(): Response
+    public function legal(LegalMentionRepository $legalRepository): Response
     {
-        return $this->render('front/information/legal.html.twig');
+        return $this->render('front/information/legal.html.twig', [
+            'legalMentions' => $legalRepository->findAll(),
+        ]);
     }
 }

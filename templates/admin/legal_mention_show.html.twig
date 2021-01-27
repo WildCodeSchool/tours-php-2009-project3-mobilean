@@ -1,0 +1,34 @@
+{% extends 'admin/admin_layout.html.twig' %}
+
+{% block title %}{{ parent() }} - Admin - Mention Légale{% endblock %}
+
+{% block body %}
+    <h1>Mention légale</h1>
+
+    <table class="table-show-refill table table-hover">
+        <tbody>
+            <tr>
+                <th scope="col">Id</th>
+                <td>{{ legalMention.id }}</td>
+            </tr>
+            <tr>
+                <th scope="col">Nom</th>
+                <td>{{ legalMention.title }}</td>
+            </tr>
+                <th scope="col">Article</th>
+                <td>{{ legalMention.article }}</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <th>
+                <a href="{{ path('admin_legal') }}">Retour sur les mentions légales</a>
+            </th>
+        </tfoot>
+    </table>
+
+    <div class="button-action">
+        <a class="btn btn-success"href="{{ path('admin_legal_edit', {'id': legalMention.id}) }}" role="button">Modifier</a>
+        {{ include('admin/legal_mention_delete_form.html.twig') }}
+    </div>
+    
+{% endblock %}
