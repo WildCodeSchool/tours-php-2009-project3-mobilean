@@ -14,6 +14,7 @@ import '../styles/frontLayout.scss';
 import '../styles/adminCrud.scss';
 import '../styles/estimates.scss';
 import '../styles/partner.scss';
+import '../styles/contact.scss';
 
 // Need jQuery? Install it with "yarn add jquery", then uncomment to import it.
 // import $ from 'jquery';

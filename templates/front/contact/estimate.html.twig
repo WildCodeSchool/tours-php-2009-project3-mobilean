@@ -10,7 +10,8 @@
 <input id="switchParticular" onclick="paticular()" value="Je suis un particulier" type="submit" />
 
 <div id="formCompany">
-    <h2>Je suis une entreprise :</h2>
+    <h1>Je suis une entreprise</h1>
+    <hr>
     {{ form_start(formCompanies) }}
     {{ form_widget(formCompanies) }}
     <button class="btn">Valider</button>
@@ -18,7 +19,8 @@
 </div>
 
 <div id="formParticular" style="display:none">
-    <h2>Je suis un particulier :</h2>
+    <h1>Je suis un particulier</h1>
+    <hr>
     {{ form_start(formIndividuals) }}
     {{ form_widget(formIndividuals) }}
     <button class="btn">Valider</button>
