@@ -7,8 +7,11 @@
 {% block body %}
 <h1>Devenir Installateur</h1>
 
-{{ form_start(form) }}
-    {{ form_widget(form) }}
-    <button class="btnPartner">Valider</button>
-{{ form_end(form) }}
+<div id="formPartner">
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <button class="btn">Valider</button>
+    {{ form_end(form) }}
+</div>
 {% endblock %}
+
