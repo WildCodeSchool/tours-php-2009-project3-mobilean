@@ -23,6 +23,8 @@
     {% block footer %}
     {% endblock %}
     </footer>
-    {{ encore_entry_script_tags('app') }}
+    {% block javascript %}
+        {{ encore_entry_script_tags('app') }}
+    {% endblock %}
 </body>
 </html>

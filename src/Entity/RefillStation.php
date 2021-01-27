@@ -65,7 +65,7 @@ class RefillStation
     private ?string $photo = "";
 
     /**
-     * @Vich\UploadableField(mapping="vehicle_photo", fileNameProperty="photo")
+     * @Vich\UploadableField(mapping="charging_stations_photo", fileNameProperty="photo")
      */
     private ?File $chargingStationPhoto = null;
 

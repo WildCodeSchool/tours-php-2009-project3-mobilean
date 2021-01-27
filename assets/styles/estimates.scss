@@ -1,0 +1,55 @@
+#switch {
+    color:#00925b;
+    background-color:#f4f5f6;
+    cursor:pointer;
+    padding:5px;
+    box-shadow: 2px 2px 2px 1px gray;
+    border-radius:5px;
+    margin-bottom: 20px;
+}
+
+#switch:hover {
+    background-color: #DCDCDC;
+    transform: scale(1.1);
+    transition: .4s;
+}
+
+#formCompany, #formParticular {
+    background-color:#f4f5f6;
+    box-shadow: 2px 2px 2px 1px gray;
+    padding: 10px;
+}
+
+#formCompany button {
+    color:#00925b;
+    background-color:#f4f5f6;
+    cursor:pointer;
+    padding:5px;
+    box-shadow: 2px 2px 2px 1px gray;
+    border-radius:5px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+#formParticular button {
+    color:#00925b;
+    background-color:#f4f5f6;
+    cursor:pointer;
+    padding:5px;
+    box-shadow: 2px 2px 2px 1px gray;
+    border-radius:5px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+#formCompany button:hover {
+    background-color: #DCDCDC;
+    transform: scale(1.1);
+    transition: .4s;
+}
+
+#formParticular button:hover {
+    background-color: #DCDCDC;
+    transform: scale(1.1);
+    transition: .4s;
+}

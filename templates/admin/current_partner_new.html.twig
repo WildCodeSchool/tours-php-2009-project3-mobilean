@@ -1,0 +1,11 @@
+{% extends 'admin/admin_layout.html.twig' %}
+
+{% block title %}{{ parent() }} - Admin - Nouveau partenaire{% endblock %}
+
+{% block body %}
+    <h1>Ajouter un nouveau partenaire</h1>
+        <div class="page-form-edit">
+            {{ include('admin/current_partner_form.html.twig') }}
+            <a href="{{ path('admin_current_partners') }}">Retour sur les partenaires</a>
+        </div>
+{% endblock %}
