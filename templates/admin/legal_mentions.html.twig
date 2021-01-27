@@ -1,0 +1,33 @@
+{# This is the page that will allow admins to see thelegal mentions #}
+
+{% extends 'admin/admin_layout.html.twig' %}
+
+{% block title %}{{ parent() }} - Admin - Mentions Légales {% endblock %}
+
+{% block body %}
+<h1>Mentions Légales</h1>
+<table class="table-refill table table-hover"> 
+        <thead>
+            <tr>
+                <th scope="col">Titre</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for legalMention in legalMentions %}
+            <tr>
+                <td>{{ legalMention.title }}</td>
+                <td>
+                    <a class="btn btn-outline-info" href="{{ path('admin_legal_show', {'id': legalMention.id}) }}" roles="button">Details</a>
+                    <a class="btn btn-outline-info" href="{{ path('admin_legal_edit', {'id': legalMention.id}) }}" roles="button">Modifier</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="9">Aucune mention légale trouvée</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <a class=" btn-add btn btn-success"href="{{ path('admin_legal_new') }}" role="button">Ajouter une mention légale</a>
+{% endblock %}
