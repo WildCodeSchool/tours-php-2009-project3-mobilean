@@ -11,25 +11,26 @@
 }
 
 .nav-link {
-    color:#00925b;
+    color:#00925b !important;
     font-size: 3em;
     padding: 0.5em;
     margin-left: 3em;
 }
 
-.navbar-toggler {
-    background-color: #548235;
+.nav-link:hover {
+    color: rgba(75, 74, 74, 0.767) !important;
+   
 }
 
 footer {
     display: flex;
     justify-content: center;
-    bottom: 0;
     width: 100%;
     margin-top: 4rem;
     box-shadow: 4px 4px 4px gray,
     -1px -1px 2px white;
     background-color: #F4F5F6;
+    min-height: 100%;
 }
 
 footer .nav-link-footer {
