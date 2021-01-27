@@ -25,7 +25,7 @@
 <h2>Dernières demandes de partenariat : </h2>
 {% if partners is not empty %}
     <ul>
-    {% for partner in partner %}
+    {% for partner in partners %}
         {% if partner.ctime|date() > "now"|date_modify("-1 week")|date() %}
         <li>
             {{ partner.ctime|date("d/m/Y") }} : <a href="{{ asset(partner.pathname) }}" target="blank">{{ partner.filename }}</a>
