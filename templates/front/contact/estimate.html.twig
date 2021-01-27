@@ -6,20 +6,22 @@
 
 {% block body %}
 
-<input id="switch" value="Formulaire - Je suis un particulier" type="submit" />
+<input id="switchCompany" onclick="company()" value="Je suis une entreprise" type="submit" />
+<input id="switchParticular" onclick="paticular()" value="Je suis un particulier" type="submit" />
+
 <div id="formCompany">
     <h2>Je suis une entreprise :</h2>
     {{ form_start(formCompanies) }}
-        {{ form_widget(formCompanies) }}
-        <button class="btn">Valider</button>
+    {{ form_widget(formCompanies) }}
+    <button class="btn">Valider</button>
     {{ form_end(formCompanies) }}
 </div>
 
 <div id="formParticular" style="display:none">
     <h2>Je suis un particulier :</h2>
     {{ form_start(formIndividuals) }}
-        {{ form_widget(formIndividuals) }}
-        <button class="btn">Valider</button>
+    {{ form_widget(formIndividuals) }}
+    <button class="btn">Valider</button>
     {{ form_end(formIndividuals) }}
 </div>
 
