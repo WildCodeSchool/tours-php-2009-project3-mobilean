@@ -45,4 +45,10 @@
 {% block footer %}
     <p class="footer-block"> <a class="nav-link-footer" href="{{path('contact_message')}}">Contactez-nous</a></p>
     <p class="footer-block"><a class="nav-link-footer" href="{{path('information_legal')}}">Mentions légales</a></p>
+    <p>Nos Partenaires : </p>
+    {% for partner in partners %}
+        <a href="{{partner.link}}">
+            <img src="/assets/images/uploads/{{ partner.icon }}" alt="logo de {{ partner.name }}">
+        </a>
+    {% endfor %}
 {% endblock %}

@@ -2,15 +2,16 @@
 
 namespace App\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Controller\FrontController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use App\Repository\PartnerRepository;
 
 /**
  * Creates complementary views
  * @Route(name="information_")
  */
-class InformationController extends AbstractController
+class InformationController extends FrontController
 {
     /**
      * Displays informations about Mobilean
