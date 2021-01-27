@@ -1,4 +1,4 @@
-{# This is the page that will allow admins to see their estimates requests #}
+{# This is the page that allows admins to see their estimates requests #}
 
 {% extends 'admin/admin_layout.html.twig' %}
 
@@ -7,14 +7,18 @@
 {% block body %}
 <h1>Demandes de Devis</h1>
 
-<ul>
-{% for estimate in estimates %}
-    <li>
-        <a href="{{ asset(estimate.pathname) }}" target="blank">{{ estimate.filename }}</a>
-        <form method="post" action="{{ path('admin_delete_estimate', {'filename': estimate.filename|url_encode}) }}" onsubmit="return confirm('Etes vous sur de vouloir supprimer ce document?');">
-            <button class="btn btn-danger">Supprimer</button>
-        </form>
-    </li>
-{% endfor %}
-</ul>
+{% if estimates is not empty %}
+    <ul>
+    {% for estimate in estimates %}
+        <li>
+            <a href="{{ asset(estimate.pathname) }}" target="blank">{{ estimate.filename }}</a>
+            <form method="post" action="{{ path('admin_delete_estimate', {'filename': estimate.filename|url_encode}) }}" onsubmit="return confirm('Etes vous sur de vouloir supprimer ce document?');">
+                <button class="btn btn-danger">Supprimer</button>
+            </form>
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Aucune demande de devis</p>
+{% endif %}
 {% endblock %}
