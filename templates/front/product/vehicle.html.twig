@@ -83,3 +83,19 @@
         </div>
     </section>
 {% endblock %}
+                            <tr>
+                                <th scope="col">Vol.compartiment arrière</th>
+                                <td>{{ vehicle.rearVolume }}</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <th>
+                                <a href="{{ path('product_vehicles') }}">Retour sur la page d'accueil</a>
+                            </th>
+                        </tfoot>
+                    </table>
+                <a href="{{path('contact_estimate')}}"><input class="request-button" type="button" value="Demande de devis"></a>
+            </div>
+        </div>
+    </section>
+{% endblock %}

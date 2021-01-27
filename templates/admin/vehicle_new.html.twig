@@ -5,7 +5,7 @@
 {% block body %}
     <h1>Ajouter un nouveau véhicule</h1>
         <div class="page-form-edit">
-            {{ include('admin/vehicle_form.html.twig') }}
+            {{ include('admin/vehicle_form.html.twig', {'button_label': 'Sauvegarder'}) }}
             <a href="{{ path('admin_vehicles') }}">Retour sur les véhicules</a>
         </div>
 {% endblock %}

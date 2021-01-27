@@ -55,8 +55,8 @@ class RefillStationType extends AbstractType
 
             ->add('chargingStationPhoto', VichFileType::class, [
                 'required'      => false,
-                'allow_delete'  => true,
-                'download_uri' => true,
+                'allow_delete'  => false,
+                'download_uri' => false,
                 'label' => 'Image'
             ]);
     }
