@@ -2,7 +2,7 @@
 
 {% block navbar %}
 
-<nav class="navbar navbar-expand-lg header-nav fixed-top">
+<nav class="navbar navbar-light navbar-expand-lg header-nav fixed-top">
     <a class="navbar-brand" href="{{path('product_vehicles')}}"><img src="/assets/images/logo.png" class="logoMobilean" alt="logo Mobilean"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -43,6 +43,6 @@
 {% endblock %}
 
 {% block footer %}
-    <p class="footer-block"> <a class="nav-link-footer" href="{{path('contact_message')}}">Contactez-nous</a></p>
+    <p class="footer-block"><a class="nav-link-footer" href="{{path('contact_message')}}">Contactez-nous</a></p>
     <p class="footer-block"><a class="nav-link-footer" href="{{path('information_legal')}}">Mentions légales</a></p>
 {% endblock %}
