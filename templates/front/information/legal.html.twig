@@ -6,4 +6,10 @@
 
 {% block body %}
 <h1>Mentions Légales</h1>
+
+{% for legalMention in legalMentions %}
+<h2>{{ legalMention.title }}</h2>
+<p>{{ legalMention.article }}</p>
+{% endfor %}
+
 {% endblock %}
