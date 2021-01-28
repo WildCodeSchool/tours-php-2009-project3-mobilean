@@ -6,9 +6,8 @@
 }
 
 html {
-    padding-top: 80px;
+    padding-top: 90px;
 }
-
 
 header, main {
     width: 80%;
@@ -17,4 +16,10 @@ header, main {
 
 main {
     min-height: 100vh;
+}
+
+@media screen and (min-width: 1024px) {
+    html {
+    padding-top: 100px;
+    }
 }
