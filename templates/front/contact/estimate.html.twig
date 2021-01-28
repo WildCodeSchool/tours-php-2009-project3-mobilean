@@ -2,13 +2,16 @@
 
 {% extends 'front/front_layout.html.twig' %}
 
-{% block title %}Demande de Devis - {{ parent() }}{% endblock %}
+{% block title %}{{ parent() }} - Demande de Devis{% endblock %}
 
 {% block body %}
 
-<input id="switch" value="Formulaire - Je suis un particulier" type="submit" />
+<input id="switchCompany" onclick="company()" value="Je suis une entreprise" type="submit" />
+<input id="switchParticular" onclick="paticular()" value="Je suis un particulier" type="submit" />
+
 <div id="formCompany">
-    <h2 class="form-title">Je suis une entreprise :</h2>
+    <h1>Je suis une entreprise</h1>
+    <hr>
     {{ form_start(formCompanies) }}
         <div class="row">
             <div class="col-md-5 offset-1">{{ form_row(formCompanies.businessName) }}</div>
@@ -29,19 +32,20 @@
         </div>
         <div class="row">    
             <div class="col-md-4 offset-1">{{ form_row(formCompanies.typeOfVehicles) }}</div>
-            <div class="col-md-3">{{ form_row(formCompanies.numberOfVehicles) }}</div>
+            <div class="col-md-2 offset-1">{{ form_row(formCompanies.numberOfVehicles) }}</div>
             <div class="col-md-3">{{ form_row(formCompanies.averageDistance) }}</div>
         </div>
         <div class="row">
             <div class="col-md-4 offset-1">{{ form_row(formCompanies.isConnectedToGas) }}</div>    
-            <div class="col-md-6">{{ form_row(formCompanies.message) }}</div>
+            <div class="col-md-5 offset-1">{{ form_row(formCompanies.message) }}</div>
         </div>
         {{ form_widget(formCompanies) }}
         <button class="btn">Valider</button>
     {{ form_end(formCompanies) }}
 </div>
 <div id="formParticular" style="display:none">
-    <h2 class="form-title">Je suis un particulier :</h2>
+    <h1>Je suis un particulier</h1>
+    <hr>
     {{ form_start(formIndividuals) }}
         <div class="row">
             <div class="col-md-5 offset-1">{{ form_row(formIndividuals.firstName) }}</div>
@@ -58,12 +62,12 @@
         </div>
         <div class="row">
             <div class="col-md-4 offset-1">{{ form_row(formIndividuals.typeOfVehicles) }}</div>
-            <div class="col-md-3">{{ form_row(formIndividuals.numberOfVehicles) }}</div>
+            <div class="col-md-2 offset-1">{{ form_row(formIndividuals.numberOfVehicles) }}</div>
             <div class="col-md-3">{{ form_row(formIndividuals.averageDistance) }}</div>
         </div>
         <div class="row">
-            <div class="col-md-3 offset-1">{{ form_row(formIndividuals.isConnectedToGas) }}</div>
-            <div class="col-md-8">{{ form_row(formIndividuals.message) }}</div>
+            <div class="col-md-4 offset-1">{{ form_row(formIndividuals.isConnectedToGas) }}</div>
+            <div class="col-md-5 offset-1">{{ form_row(formIndividuals.message) }}</div>
         </div>    
         
         {{ form_widget(formIndividuals) }}

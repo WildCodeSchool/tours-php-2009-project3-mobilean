@@ -6,29 +6,24 @@
 }
 
 .logoMobilean {
-    height: 2vh;
-    width: 6vh;
+    height: auto;
+    width: 10vh;
 }
 
 .nav-link {
     color:#00925b !important;
-    font-size: 3em;
+    font-size: 2em;
     padding: 0.5em;
     margin-left: 3em;
 }
 
 .nav-link:hover {
     color: rgba(75, 74, 74, 0.767) !important;
-   
 }
 
 footer {
-    display: flex;
-    justify-content: center;
     width: 100%;
     margin-top: 4rem;
-    box-shadow: 4px 4px 4px gray,
-    -1px -1px 2px white;
     background-color: #F4F5F6;
     min-height: 100%;
 }
@@ -38,24 +33,44 @@ footer .nav-link-footer {
     margin: 10em;
 }
 
+.row-footer {
+    margin-bottom: 10px;
+}
+
+.row-image {
+    padding-bottom: 10px;
+}
+
+footer img {
+    width: 60%;
+    height: auto;
+}
+
 /* For computers */
 @media screen and (min-width : 1024px) {
     .nav-link {
-        color:#00925b;
-        font-size: 1em;
+        color:#00925b !important;
+        font-size: 1.8em;
+        padding: 0.5em;
+        margin-left: 3em;
     }
 
     .logoMobilean {
-        height: 4vh;
-        width: 6vw;
+        height: auto;
+        width: 8vw;
     }
 
     footer {
-        display: flex;
-        justify-content: center;
         bottom: 0;
         width: 100%;
         margin-top: 4rem;
         background-color: #F4F5F6;
+    }
+}
+
+@media screen and (min-width : 1200px) {
+    .nav-link {
+        color:#00925b !important;
+        font-size: 1em;
     }
 }

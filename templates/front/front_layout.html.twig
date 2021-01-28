@@ -2,7 +2,7 @@
 
 {% block navbar %}
 
-<nav class="navbar navbar-light navbar-expand-lg header-nav fixed-top">
+<nav class="navbar navbar-light navbar-expand-xl header-nav fixed-top">
     <a class="navbar-brand" href="{{path('product_vehicles')}}"><img src="/assets/images/logo.png" class="logoMobilean" alt="logo Mobilean"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -43,12 +43,23 @@
 {% endblock %}
 
 {% block footer %}
-    <p class="footer-block"><a class="nav-link-footer" href="{{path('contact_message')}}">Contactez-nous</a></p>
-    <p class="footer-block"><a class="nav-link-footer" href="{{path('information_legal')}}">Mentions légales</a></p>
-    <p>Nos Partenaires : </p>
-    {% for partner in partners %}
-        <a href="{{partner.link}}">
-            <img src="/assets/images/uploads/{{ partner.icon }}" alt="logo de {{ partner.name }}">
-        </a>
-    {% endfor %}
+<footer>
+    <div class="container">
+        <div class="row-footer row justify-content-around">
+            <a class="nav-link nav-style" href="{{path('contact_message')}}">Contactez-nous</a>
+            <a class="nav-link nav-style" href="{{path('information_legal')}}">Mentions légales</a>
+        </div>
+        <h3 class="row-footer row justify-content-md-center">Nos partenaires</h3>
+        <div class="row-image row justify-content-around">
+         {% for partner in partners %}
+            <div class="col">  
+                <a href="{{ partner.link }}">
+                    <img src="/assets/images/uploads/{{ partner.icon }}" alt="logo de {{ partner.name }}" title="{{ partner.name }}">
+                </a>
+            </div>
+        {% endfor %}
+        </div>
+        
+    </div>
+</footer> 
 {% endblock %}

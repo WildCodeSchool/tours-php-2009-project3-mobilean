@@ -20,14 +20,19 @@ class LegalMention
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Assert\NotBlank()
-     * @Assert\Length(min=2, max=255)
+     * @Assert\NotBlank(message="Veuillez renseigner ce champ")
+     * @Assert\Length(
+     *      min=2,
+     *      max=255,
+     *      maxMessage="Ce champ doit faire maximum {{ limit }} caractères",
+     *      minMessage="Ce champ doit faire miminum {{ limit }} caractères",
+     * )
      */
     private string $title;
 
     /**
      * @ORM\Column(type="text")
-     * @Assert\NotBlank()
+     * @Assert\NotBlank(message="Veuillez renseigner ce champ")
      */
     private string $article;
 

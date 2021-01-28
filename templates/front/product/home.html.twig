@@ -64,7 +64,7 @@
             </ol>
             <div class="carousel-inner">
                 {% for vehicle in commercialVehicles %}
-                    <div class="carousel-item {{ loop.first ? 'active': '' }} ">
+                    <div class="carousel-item {{ loop.first ? 'active': '' }}">
                         <h4>{{ vehicle.name }}</h4>
                         <a href="{{ path('product_vehicle', { id : vehicle.id }) }}"><img class="d-block w-100" src=" /assets/images/uploads/{{ vehicle.photo }}" alt="Photo du véhicule"></a>
                     </div>

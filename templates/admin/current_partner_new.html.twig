@@ -5,7 +5,7 @@
 {% block body %}
     <h1>Ajouter un nouveau partenaire</h1>
         <div class="page-form-edit">
-            {{ include('admin/current_partner_form.html.twig') }}
+            {{ include('admin/current_partner_form.html.twig', {'button_label': 'Sauvegarder'}) }}
             <a href="{{ path('admin_current_partners') }}">Retour sur les partenaires</a>
         </div>
 {% endblock %}

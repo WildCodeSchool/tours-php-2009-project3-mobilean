@@ -25,8 +25,8 @@ class CurrentPartnerType extends AbstractType
             ])
 
             ->add('partnerIcon', VichFileType::class, [
-                'allow_delete'  => true,
-                'download_uri' => true,
+                'allow_delete'  => false,
+                'download_uri' => false,
                 'label' => 'Logo du partenaire : '
             ]);
     }
