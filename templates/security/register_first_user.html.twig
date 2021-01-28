@@ -2,7 +2,7 @@
 
 {% extends 'base.html.twig' %}
 
-{% block title %}Enregitrez-vous{% endblock %}
+{% block title %}{{ parent() }} - Enregitrez-vous{% endblock %}
 
 {% block body %}
     {% for flashError in app.flashes('verify_email_error') %}

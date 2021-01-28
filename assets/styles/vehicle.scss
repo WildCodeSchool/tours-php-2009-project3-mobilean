@@ -18,7 +18,7 @@
     box-shadow: 2px 2px 2px gray,
     -1px -1px 2px white;
     background-color: #F2F4F1;
-    width: 100%;
+    height: auto;
 }
 
 .vehicule-details-title {
@@ -26,7 +26,6 @@
     text-align: center;
     font-size: 40px;
     color:#00925b;
-
 }
 
 .vehicule-details {
@@ -37,6 +36,7 @@
     -1px -1px 2px white;
     background-color: #F2F4F1;
     padding-bottom: 20px;
+    margin: auto;
 }
 
 .request-button {    
@@ -67,8 +67,8 @@
         box-shadow: 2px 2px 2px gray,
         -1px -1px 2px white;
         background-color: #F2F4F1;
-        height: 70vh;
         width: 50vw;
+        height: auto;
         margin: auto;
     }
 
@@ -81,6 +81,7 @@
         background-color: #F2F4F1;
         padding-bottom: 20px;
         width:50vw;
+        height: auto;
     }
 
     .vehicle-description {

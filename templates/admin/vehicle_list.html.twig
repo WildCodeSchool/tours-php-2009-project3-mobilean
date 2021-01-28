@@ -14,7 +14,6 @@
                 <th scope="col">Type de véhicule</th>
                 <th scope="col">Puissance fiscale</th>
                 <th scope="col">Puissance réelle</th>
-                <th scope="col">Photo</th>
                 <th scope="col">Actions</th>
             </tr>
         </thead>
@@ -26,7 +25,6 @@
                 <td>{{ vehicle.type }}</td>
                 <td>{{ vehicle.fiscalPower }}</td>
                 <td>{{ vehicle.actualPower }}</td>
-                <td>{{ vehicle.photo }}</td>
                 <td>
                     <a class="btn btn-outline-info" href="{{ path('admin_vehicle_show', {'id': vehicle.id}) }}" roles="button">Détails</a>
                     <a class="btn btn-outline-info"href="{{ path('admin_vehicle_edit', {'id': vehicle.id}) }}" roles="button">Modifier</a>

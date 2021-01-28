@@ -6,8 +6,8 @@
 }
 
 .logoMobilean {
-    height: 2vh;
-    width: 6vh;
+    height: auto;
+    width: 10vh;
 }
 
 .nav-link {
@@ -22,12 +22,8 @@
 }
 
 footer {
-    display: flex;
-    justify-content: center;
     width: 100%;
     margin-top: 4rem;
-    box-shadow: 4px 4px 4px gray,
-    -1px -1px 2px white;
     background-color: #F4F5F6;
     min-height: 100%;
 }
@@ -35,6 +31,19 @@ footer {
 footer .nav-link-footer {
     color:#00925b;
     margin: 10em;
+}
+
+.row-footer {
+    margin-bottom: 10px;
+}
+
+.row-image {
+    padding-bottom: 10px;
+}
+
+footer img {
+    width: 60%;
+    height: auto;
 }
 
 /* For computers */
@@ -47,13 +56,11 @@ footer .nav-link-footer {
     }
 
     .logoMobilean {
-        height: 4vh;
-        width: 6vw;
+        height: auto;
+        width: 8vw;
     }
 
     footer {
-        display: flex;
-        justify-content: center;
         bottom: 0;
         width: 100%;
         margin-top: 4rem;
