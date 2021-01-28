@@ -6,13 +6,12 @@
 }
 
 html {
-    padding-top: 80px;
+    padding-top: 90px;
 }
 
 body {
     font-family: 'Ubuntu', sans-serif;
 }
-
 
 header, main {
     width: 80%;
@@ -45,4 +44,9 @@ main {
 
 .btn-form {
     margin-top: 10px;
+
+@media screen and (min-width: 1024px) {
+    html {
+        padding-top: 100px;
+    }
 }

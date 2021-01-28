@@ -23,8 +23,13 @@ class Partner
 
     /**
      * @ORM\Column(type="string", length=255, nullable=false)
-     * @Assert\NotBlank()
-     * @Assert\Length(min=2, max=255)
+     * @Assert\NotBlank(message="Veuillez renseigner ce champ")
+     * @Assert\Length(
+     *      min=2,
+     *      max=255,
+     *      maxMessage="Ce champ doit faire maximum {{ limit }} caractères",
+     *      minMessage="Ce champ doit faire miminum {{ limit }} caractères",
+     * )
      */
     private ?string $name;
 
@@ -34,14 +39,19 @@ class Partner
     private ?string $icon = "";
 
     /**
-     * @Assert\NotBlank()
+     * @Assert\NotBlank(message="Veuillez renseigner ce champ")
      * @Vich\UploadableField(mapping="partner_icon", fileNameProperty="icon")
      */
     private ?File $partnerIcon;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
-     * @Assert\Length(min=2, max=255)
+     * @Assert\Length(
+     *      min=2,
+     *      max=255,
+     *      maxMessage="Ce champ doit faire maximum {{ limit }} caractères",
+     *      minMessage="Ce champ doit faire miminum {{ limit }} caractères",
+     * )
      */
     private ?string $link;
 

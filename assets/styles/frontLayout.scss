@@ -12,14 +12,13 @@
 
 .nav-link {
     color:#00925b !important;
-    font-size: 3em;
+    font-size: 2em;
     padding: 0.5em;
     margin-left: 3em;
 }
 
 .nav-link:hover {
     color: rgba(75, 74, 74, 0.767) !important;
-   
 }
 
 footer {
@@ -50,8 +49,10 @@ footer img {
 /* For computers */
 @media screen and (min-width : 1024px) {
     .nav-link {
-        color:#00925b;
-        font-size: 1em;
+        color:#00925b !important;
+        font-size: 1.8em;
+        padding: 0.5em;
+        margin-left: 3em;
     }
 
     .logoMobilean {
@@ -64,5 +65,12 @@ footer img {
         width: 100%;
         margin-top: 4rem;
         background-color: #F4F5F6;
+    }
+}
+
+@media screen and (min-width : 1200px) {
+    .nav-link {
+        color:#00925b !important;
+        font-size: 1em;
     }
 }

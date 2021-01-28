@@ -1,24 +1,21 @@
-function myFunction() {
-    const form1 = document.getElementById('formCompany');
-    const form2 = document.getElementById('formParticular');
-    const switchButton = document.getElementById('switch');
+function companyFunction() {
+    const company = document.getElementById('formCompany');
+    const particular = document.getElementById('formParticular');
 
-    if (switchButton.value === 'Formulaire - Je suis un particulier') {
-        switchButton.value = 'Formulaire - Je suis une entreprise';
-    } else {
-        switchButton.value = 'Formulaire - Je suis un particulier';
-    }
-
-    if (form1.style.display === 'none') {
-        form1.style.display = 'block';
-    } else {
-        form1.style.display = 'none';
-    }
-    if (form2.style.display === 'none') {
-        form2.style.display = 'block';
-    } else {
-        form2.style.display = 'none';
+    if (company.style.display === 'none') {
+        particular.style.display = 'none';
+        company.style.display = 'block';
     }
 }
+document.getElementById('switchCompany').addEventListener('click', companyFunction, false);
 
-document.getElementById('switch').addEventListener('click', myFunction, false);
+function particularFunction() {
+    const particular = document.getElementById('formParticular');
+    const company = document.getElementById('formCompany');
+
+    if (particular.style.display === 'none') {
+        company.style.display = 'none';
+        particular.style.display = 'block';
+    }
+}
+document.getElementById('switchParticular').addEventListener('click', particularFunction, false);
