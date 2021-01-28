@@ -24,32 +24,40 @@ class RefillStation
 
     /**
      * @ORM\Column(type="string", length=50, nullable=false)
-     * @Assert\NotBlank()
-     * @Assert\Length(min=2, max=255)
+     * @Assert\NotBlank(message="Veuillez renseigner ce champ")
+     * @Assert\Length(
+     *      min=2,
+     *      max=255,
+     *      maxMessage="Ce champ doit faire maximum {{ limit }} caractères",
+     *      minMessage="Ce champ doit faire miminum {{ limit }} caractères",
+     * )
      */
     private string $name;
 
     /**
      * @ORM\Column(type="text", nullable=false)
-     * @Assert\NotBlank()
+     * @Assert\NotBlank(message="Veuillez renseigner ce champ")
      */
     private string $description;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
-     * @Assert\Positive()
+     * @Assert\Positive(message="Veuillez renseigner un nombre positif")
      */
     private ?int $debit;
 
     /**
      * @ORM\Column(type="string", length=100, nullable=true)
-     * @Assert\Choice({"Intérieure", "Extérieure", "Intérieure et Extérieure"})
+     * @Assert\Choice(
+     *      choices={"Intérieure", "Extérieure", "Intérieure et Extérieure"},
+     *      message="Veuillez sélectionner une option valide",
+     * )
      */
     private ?string $installation;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
-     * @Assert\Positive()
+     * @Assert\Positive(message="Veuillez renseigner un nombre positif")
      */
     private ?int $refillTime;
 

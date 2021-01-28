@@ -37,34 +37,42 @@ class VehicleType extends AbstractType
 
             ->add('fiscalPower', IntegerType::class, [
                 'label' => 'Puissance fiscale : ',
+                'required' => false,
             ])
 
             ->add('actualPower', IntegerType::class, [
                 'label' => 'Puissance réelle : ',
+                'required' => false,
             ])
 
             ->add('tankCapacityCNG', IntegerType::class, [
                 'label' => 'Capacité reservoir GNV : ',
+                'required' => false,
             ])
 
             ->add('consumptionCNG', IntegerType::class, [
                 'label' => 'Consommation GNV : ',
+                'required' => false,
             ])
 
             ->add('tankCapacityFuel', IntegerType::class, [
                 'label' => 'Capacité carburant : ',
+                'required' => false,
             ])
 
             ->add('consumptionFuel', IntegerType::class, [
                 'label' => 'Consomation carburant : ',
+                'required' => false,
             ])
 
             ->add('autonomy', IntegerType::class, [
                 'label' => 'Autonomie : ',
+                'required' => false,
             ])
 
             ->add('rearVolume', IntegerType::class, [
                 'label' => 'Volume compartiment arrière : ',
+                'required' => false,
             ])
 
             ->add('vehiclePhoto', VichFileType::class, [
