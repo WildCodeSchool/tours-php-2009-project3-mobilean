@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Controller\FrontController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Repository\VehicleRepository;
@@ -12,7 +12,7 @@ use App\Repository\RefillStationRepository;
  * Creates views that allow users to see the different products
  * @Route(name="product_")
  */
-class ProductController extends AbstractController
+class ProductController extends FrontController
 {
     /**
      * Displays home page

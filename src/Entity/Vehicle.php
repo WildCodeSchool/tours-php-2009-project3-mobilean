@@ -24,67 +24,76 @@ class Vehicle
 
     /**
      * @ORM\Column(type="string", length=50, nullable=false)
-     * @Assert\NotBlank()
-     * @Assert\Length(min=2, max=255)
+     * @Assert\NotBlank(message="Veuillez renseigner ce champ")
+     * @Assert\Length(
+     *      min=2,
+     *      max=255,
+     *      maxMessage="Ce champ doit faire maximum {{ limit }} caractères",
+     *      minMessage="Ce champ doit faire miminum {{ limit }} caractères",
+     * )
      */
     private string $name;
 
     /**
      * @ORM\Column(type="text", nullable=false)
-     * @Assert\NotBlank()
+     * @Assert\NotBlank(message="Veuillez renseigner ce champ")
      */
     private string $description;
 
     /**
      * @ORM\Column(type="string", length=50, nullable=false)
-     * @Assert\Choice({"Utilitaire", "Particulier"})
+     * @Assert\NotBlank(message="Veuillez renseigner ce champ")
+     * @Assert\Choice(
+     *      choices={"Utilitaire", "Particulier"},
+     *      message="Veuillez sélectionner une option valide",
+     * )
      */
     private string $type;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
-     * @Assert\Positive()
+     * @Assert\Positive(message="Veuillez renseigner un nombre positif")
      */
     private ?int $fiscalPower;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
-     * @Assert\Positive()
+     * @Assert\Positive(message="Veuillez renseigner un nombre positif")
      */
     private ?int $actualPower;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
-     * @Assert\Positive()
+     * @Assert\Positive(message="Veuillez renseigner un nombre positif")
      */
     private ?int $tankCapacityCNG;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
-     * @Assert\Positive()
+     * @Assert\Positive(message="Veuillez renseigner un nombre positif")
      */
     private ?int $consumptionCNG;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
-     * @Assert\Positive()
+     * @Assert\Positive(message="Veuillez renseigner un nombre positif")
      */
     private ?int $tankCapacityFuel;
     /**
      * @ORM\Column(type="integer", nullable=true)
-     * @Assert\Positive()
+     * @Assert\Positive(message="Veuillez renseigner un nombre positif")
      */
     private ?int $consumptionFuel;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
-     * @Assert\Positive()
+     * @Assert\Positive(message="Veuillez renseigner un nombre positif")
      */
     private ?int $autonomy;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
-     * @Assert\Positive()
+     * @Assert\Positive(message="Veuillez renseigner un nombre positif")
      */
     private ?int $rearVolume;
 

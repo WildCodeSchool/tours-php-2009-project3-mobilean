@@ -11,37 +11,59 @@ use Symfony\Component\Validator\Constraints as Assert;
 class Contact
 {
     /**
-     * @Assert\Length(min=2, max=255)
+     * @Assert\Length(
+     *      min=2,
+     *      max=255,
+     *      maxMessage="Ce champ doit faire maximum {{ limit }} caractères",
+     *      minMessage="Ce champ doit faire miminum {{ limit }} caractères",
+     * )
      */
     private ?string $businessName = null;
 
     /**
-     * @Assert\NotBlank()
-     * @Assert\Length(min=2, max=255)
+     * @Assert\NotBlank(message="Veuillez renseigner ce champ")
+     * @Assert\Length(
+     *      min=2,
+     *      max=255,
+     *      maxMessage="Ce champ doit faire maximum {{ limit }} caractères",
+     *      minMessage="Ce champ doit faire miminum {{ limit }} caractères",
+     * )
      */
     private string $fullName;
 
     /**
-     * @Assert\NotBlank()
-     * @Assert\Email()
+     * @Assert\NotBlank(message="Veuillez renseigner ce champ")
+     * @Assert\Email(message="Veuillez entrer une adresse email valide")
      */
     private string $email;
 
 
     /**
-     * @Assert\Regex(pattern="/^[0-9]+$/")
-     * @Assert\Length(min=10, max=10)
+     * @Assert\Regex(
+     *      pattern="/^[0-9]+$/",
+     *      message="Ce champ ne peut contenir que des chiffres (0 - 9)",
+     * )
+     * @Assert\Length(
+     *      min=10,
+     *      max=10,
+     *      exactMessage="Ce champ doit faire exactement {{ limit }} caractères",
+     * )
      */
     private ?string $telephone = null;
 
     /**
-     * @Assert\NotBlank()
-     * @Assert\Length(min=2, max=255)
+     * @Assert\NotBlank(message="Veuillez renseigner ce champ")
+     * @Assert\Length(
+     *      min=2,
+     *      max=255,
+     *      maxMessage="Ce champ doit faire maximum {{ limit }} caractères",
+     *      minMessage="Ce champ doit faire miminum {{ limit }} caractères",
+     * )
      */
     private string $subject;
 
     /**
-     * @Assert\Length(max=2000)
+     * @Assert\Length(max=2000, maxMessage="Ce champ doit faire maximum {{ limit }} caractères")
      */
     private ?string $message;
 

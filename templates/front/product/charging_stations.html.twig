@@ -4,7 +4,7 @@
 
 {% block title %}Bornes de Ravitaillement - {{ parent() }}{% endblock %}
 {% block body %}
-    <h1>Nos Solutions de Ravitaillement </h1>
+    <h1 class="stationpage-title">Nos Solutions de Ravitaillement </h1>
     <p class="presentation-text">
         Faire le plein de Gaz Naturel n'a jamais été aussi facile grâce à la borne de recharge installée à domicile ou sur le lieu de travail.
         Une fois connectée sur votre réseau domestique, la borne de recharge vous permet ravitailler votre véhicule : la nuit suffit à faire le plein !
@@ -17,8 +17,8 @@
                 <img class="stations-image" src="/assets/images/uploads/{{refillStation.photo}}" alt="{{refillStation.name}}">
             </div>
             <div>
-                <h3 class="vehicule-details-title">Caractéristiques de la borne</h3>
-                    <table class="table-show-vehicle table table-hover">
+                <h3 class="station-details-title">Caractéristiques de la borne</h3>
+                    <table class="table-show-station table table-hover">
                     <tbody>
                         <tr>
                             <th scope="col">Débit de borne </th>

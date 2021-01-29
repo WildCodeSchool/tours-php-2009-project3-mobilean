@@ -1,0 +1,25 @@
+#formContact {
+    background-color:#f4f5f6;
+    box-shadow: 2px 2px 2px 1px gray;
+    padding: 10px;
+}
+
+#formContact button {
+    color:#00925b;
+    background-color:#f4f5f6;
+    cursor:pointer;
+    padding:5px;
+    box-shadow: 2px 2px 2px 1px gray;
+    border-radius:5px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+#formContact button:hover {
+    color: #DCDCDC;
+    background-color: #00925b;
+}
+
+#formContact h1 {
+    color:#00925b;
+}

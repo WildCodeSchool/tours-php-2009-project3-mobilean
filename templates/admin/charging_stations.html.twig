@@ -14,7 +14,6 @@
                 <th scope="col">Debit</th>
                 <th scope="col">Installation</th>
                 <th scope="col">Temps de recharge</th>
-                <th scope="col">Photo</th>
                 <th scope="col">actions</th>
             </tr>
         </thead>
@@ -26,7 +25,6 @@
                 <td>{{ refillStation.debit }}</td>
                 <td>{{ refillStation.installation }}</td>
                 <td>{{ refillStation.refillTime }}</td>
-                <td>{{ refillStation.photo }}</td>
                 <td>
                     <a class="btn btn-outline-info" href="{{ path('admin_charging_station_show', {'id': refillStation.id}) }}" roles="button">Details</a>
                     <a class="btn btn-outline-info" href="{{ path('admin_charging_station_edit', {'id': refillStation.id}) }}" roles="button">Modifier</a>

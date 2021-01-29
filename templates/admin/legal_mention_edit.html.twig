@@ -1,0 +1,17 @@
+{% extends 'admin/admin_layout.html.twig' %}
+
+{% block title %}{{ parent() }} - Admin - Modifier une mention légale{% endblock %}
+
+{% block body %}
+    <h1>Modifier la mention légale</h1>
+        <div class="page-form-edit">
+            <div class="form-edit">
+                {{ include('admin/legal_mention_form.html.twig') }}
+            </div>
+            <div class="form-edit">
+                {{ include('admin/legal_mention_delete_form.html.twig') }}
+            </div>
+            <a href="{{ path('admin_legal') }}">Retour sur les mention légales</a>
+        </div>
+    
+{% endblock %}

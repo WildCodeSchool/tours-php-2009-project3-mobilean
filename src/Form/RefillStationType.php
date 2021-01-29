@@ -28,6 +28,7 @@ class RefillStationType extends AbstractType
 
             ->add('debit', IntegerType::class, [
                 'label' => 'Débit de la borne : ',
+                'required' => false,
             ])
 
             ->add('installation', ChoiceType::class, [
@@ -38,10 +39,12 @@ class RefillStationType extends AbstractType
                 ],
                 'label' => 'Choix de l\'installation : ',
                 'expanded' => true,
+                'required' => false,
             ])
 
             ->add('refillTime', IntegerType::class, [
                 'label' => 'Temps de recharge : ',
+                'required' => false,
             ])
 
             ->add('additionalStorage', ChoiceType::class, [
@@ -51,12 +54,13 @@ class RefillStationType extends AbstractType
                 ],
                 'label' => 'Stockage supplémentaire? ',
                 'expanded' => true,
+                'required' => false,
             ])
 
             ->add('chargingStationPhoto', VichFileType::class, [
                 'required'      => false,
-                'allow_delete'  => true,
-                'download_uri' => true,
+                'allow_delete'  => false,
+                'download_uri' => false,
                 'label' => 'Image'
             ]);
     }

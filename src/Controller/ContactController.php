@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Controller\FrontController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
@@ -23,7 +23,7 @@ use DateTime;
  * Creates the views that allow the users send information to Mobilean
  * @Route(name="contact_")
  */
-class ContactController extends AbstractController
+class ContactController extends FrontController
 {
     /**
      * Displays contact page

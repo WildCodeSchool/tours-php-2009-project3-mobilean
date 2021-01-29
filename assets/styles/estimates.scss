@@ -1,0 +1,75 @@
+#switchCompany {
+    color:#00925b;
+    background-color:#f4f5f6;
+    cursor:pointer;
+    padding:5px;
+    box-shadow: 2px 2px 2px 1px gray;
+    border-radius:5px;
+    margin-bottom: 20px;
+}
+
+#switchCompany:focus {
+    color: #DCDCDC;
+    background-color: #00925b;;
+}
+
+#switchParticular {
+    color:#00925b;
+    background-color:#f4f5f6;
+    cursor:pointer;
+    padding:5px;
+    box-shadow: 2px 2px 2px 1px gray;
+    border-radius:5px;
+    margin-bottom: 20px;
+}
+
+#switchParticular:focus {
+    color: #DCDCDC;
+    background-color: #00925b;
+}
+
+#formCompany, #formParticular {
+    background-color:#f4f5f6;
+    box-shadow: 2px 2px 2px 1px gray;
+    padding: 10px;
+}
+
+#formCompany button {
+    color:#00925b;
+    background-color:#f4f5f6;
+    cursor:pointer;
+    padding:5px;
+    box-shadow: 2px 2px 2px 1px gray;
+    border-radius:5px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+#formParticular button {
+    color:#00925b;
+    background-color:#f4f5f6;
+    cursor:pointer;
+    padding:5px;
+    box-shadow: 2px 2px 2px 1px gray;
+    border-radius:5px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+#formCompany button:hover {
+    color: #DCDCDC;
+    background-color: #00925b;
+}
+
+#formParticular button:hover {
+    color: #DCDCDC;
+    background-color: #00925b;;
+}
+
+#formCompany h1 {
+    color:#00925b;
+}
+
+#formParticular h1 {
+    color:#00925b;
+}

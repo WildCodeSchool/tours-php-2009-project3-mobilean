@@ -11,81 +11,135 @@ use Symfony\Component\Validator\Constraints as Assert;
 class Partnership
 {
     /**
-     * @Assert\NotBlank()
-     * @Assert\Length(min=2, max=255)
+     * @Assert\NotBlank(message="Veuillez renseigner ce champ")
+     * @Assert\Length(
+     *      min=2,
+     *      max=255,
+     *      maxMessage="Ce champ doit faire maximum {{ limit }} caractères",
+     *      minMessage="Ce champ doit faire miminum {{ limit }} caractères",
+     * )
      */
     private string $businessName;
 
     /**
-     * @Assert\NotBlank()
-     * @Assert\Regex(pattern="/\b(?:Installation|Maintenance|Autre|Aucune)\b/")
+     * @Assert\NotBlank(message="Veuillez renseigner ce champ")
+     * @Assert\Regex(
+     *      pattern="/\b(?:Installation|Maintenance|Autre|Aucune)\b/",
+     *      message="Veuillez rensigner une option valide",
+     * )
      */
     private string $expertise;
 
     /**
-     * @Assert\Length(min=2, max=255)
+     * @Assert\Length(
+     *      min=2,
+     *      max=255,
+     *      maxMessage="Ce champ doit faire maximum {{ limit }} caractères",
+     *      minMessage="Ce champ doit faire miminum {{ limit }} caractères",
+     * )
      */
     private ?string $otherExpertise = 'Autre';
 
     /**
-     * @Assert\NotBlank()
-     * @Assert\Regex(pattern="/^[0-9]+$/")
-     * @Assert\Length(min=9, max=9)
+     * @Assert\NotBlank(message="Veuillez renseigner ce champ")
+     * @Assert\Regex(
+     *      pattern="/^[0-9]+$/",
+     *      message="Ce champ ne peut contenir que des chiffres (0 - 9)",
+     * )
+     * @Assert\Length(
+     *      min=9,
+     *      max=9,
+     *      exactMessage="Ce champ doit faire exactement {{ limit }} caractères",
+     * )
      */
     private string $numberSIREN;
 
     /**
-     * @Assert\NotBlank()
-     * @Assert\Length(min=2, max=255)
+     * @Assert\NotBlank(message="Veuillez renseigner ce champ")
+     * @Assert\Length(
+     *      min=2,
+     *      max=255,
+     *      maxMessage="Ce champ doit faire maximum {{ limit }} caractères",
+     *      minMessage="Ce champ doit faire miminum {{ limit }} caractères",
+     * )
      */
     private string $fullName;
 
     /**
-     * @Assert\NotBlank()
-     * @Assert\Length(min=2, max=255)
+     * @Assert\NotBlank(message="Veuillez renseigner ce champ")
+     * @Assert\Length(
+     *      min=2,
+     *      max=255,
+     *      maxMessage="Ce champ doit faire maximum {{ limit }} caractères",
+     *      minMessage="Ce champ doit faire miminum {{ limit }} caractères",
+     * )
      */
     private string $jobTitle;
 
     /**
-     * @Assert\NotBlank()
-     * @Assert\Regex(pattern="/^[0-9]+$/")
-     * @Assert\Length(min=10, max=10)
+     * @Assert\NotBlank(message="Veuillez renseigner ce champ")
+     * @Assert\Regex(
+     *      pattern="/^[0-9]+$/",
+     *      message="Ce champ ne peut contenir que des chiffres (0 - 9)",
+     * )
+     * @Assert\Length(
+     *      min=10,
+     *      max=10,
+     *      exactMessage="Ce champ doit faire exactement {{ limit }} caractères",
+     * )
      */
     private string $telephone;
 
     /**
-     * @Assert\NotBlank()
-     * @Assert\Email()
+     * @Assert\NotBlank(message="Veuillez renseigner ce champ")
+     * @Assert\Email(message="Veuillez entrer une adresse email valide")
      */
     private string $email;
 
     /**
-     * @Assert\NotBlank()
-     * @Assert\Length(min=5, max=255)
+     * @Assert\NotBlank(message="Veuillez renseigner ce champ")
+     * @Assert\Length(
+     *      min=5,
+     *      max=255,
+     *      maxMessage="Ce champ doit faire maximum {{ limit }} caractères",
+     *      minMessage="Ce champ doit faire miminum {{ limit }} caractères",
+     * )
      */
     private string $address;
 
     /**
-     * @Assert\NotBlank()
-     * @Assert\Regex(pattern="/^[0-9]+$/")
-     * @Assert\Length(min=5, max=5)
+     * @Assert\NotBlank(message="Veuillez renseigner ce champ")
+     * @Assert\Regex(
+     *      pattern="/^[0-9]+$/",
+     *      message="Ce champ ne peut contenir que des chiffres (0 - 9)",
+     * )
+     * @Assert\Length(
+     *      min=5,
+     *      max=5,
+     *      exactMessage="Ce champ doit faire exactement {{ limit }} caractères",
+     * )
      */
     private string $zipCode;
 
     /**
-     * @Assert\NotBlank()
-     * @Assert\Length(min=1, max=255)
+     * @Assert\NotBlank(message="Veuillez renseigner ce champ")
+     * @Assert\Length(
+     *      min=1,
+     *      max=255,
+     *      maxMessage="Ce champ doit faire maximum {{ limit }} caractères",
+     *      minMessage="Ce champ doit faire miminum {{ limit }} caractères",
+     * )
      */
     private string $city;
 
     /**
-     * @Assert\NotBlank()
-     * @Assert\Positive()
+     * @Assert\NotBlank(message="Veuillez renseigner ce champ")
+     * @Assert\Positive(message="Veuillez renseigner un nombre positif")
      */
     private int $workforce;
 
     /**
-     * @Assert\Length(max=2000)
+     * @Assert\Length(max=2000, maxMessage="Ce champ doit faire maximum 2000 caractères")
      */
     private ?string $message = null;
 

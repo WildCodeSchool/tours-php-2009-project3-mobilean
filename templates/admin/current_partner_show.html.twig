@@ -1,0 +1,39 @@
+{% extends 'admin/admin_layout.html.twig' %}
+
+{% block title %}{{ parent() }} - Admin - Partenaire{% endblock %}
+
+{% block body %}
+    <h1>Partenaire</h1>
+
+    <table class="table-show-refill table table-hover">
+        <tbody>
+            <tr>
+                <th scope="col">Id</th>
+                <td>{{ partner.id }}</td>
+            </tr>
+            <tr>
+                <th scope="col">Nom</th>
+                <td>{{ partner.name }}</td>
+            </tr>
+            <tr>
+                <th scope="col">Site internet</th>
+                <td>{{ partner.link }}</td>
+            </tr>
+            <tr>
+                <th scope="col">Logo</th>
+                <td><img src="/assets/images/uploads/{{ partner.icon }}" alt="logo de {{ partner.name }}"></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <th>
+                <a href="{{ path('admin_current_partners') }}">Retour sur les partenaires</a>
+            </th>
+        </tfoot>
+    </table>
+
+    <div class="button-action">
+        <a class="btn btn-success"href="{{ path('admin_current_partner_edit', {'id': partner.id}) }}" role="button">Modifier</a>
+        {{ include('admin/current_partner_delete_form.html.twig') }}
+    </div>
+    
+{% endblock %}

@@ -2,15 +2,16 @@
 
 namespace App\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Controller\FrontController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use App\Repository\LegalMentionRepository;
 
 /**
  * Creates complementary views
  * @Route(name="information_")
  */
-class InformationController extends AbstractController
+class InformationController extends FrontController
 {
     /**
      * Displays informations about Mobilean
@@ -27,8 +28,10 @@ class InformationController extends AbstractController
      * @Route("/mentions-legales", name="legal")
      * @return Response
      */
-    public function legal(): Response
+    public function legal(LegalMentionRepository $legalRepository): Response
     {
-        return $this->render('front/information/legal.html.twig');
+        return $this->render('front/information/legal.html.twig', [
+            'legalMentions' => $legalRepository->findAll(),
+        ]);
     }
 }

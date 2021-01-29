@@ -36,8 +36,8 @@
                 <td>{{ refillStation.additionalStorage ? 'Yes' : 'No' }}</td>
             </tr>
             <tr>
-                <th scope="col">Photo</th>
-                <td>{{ refillStation.photo }}</td>
+                <th scope="col">Photo de la borne</th>
+                <td><img src="/assets/images/uploads/{{ refillStation.photo }}" alt="image de la borne {{ refillStation.name }}"></td>
             </tr>
         </tbody>
         <tfoot>

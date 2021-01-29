@@ -6,4 +6,51 @@
 
 {% block body %}
 <h1>Accueil</h1>
+
+<h2>Dernières demandes de devis : </h2>
+{% if estimates is not empty %}
+    <ul>
+    {% for estimate in estimates %}
+        {% if estimate.ctime|date() > "now"|date_modify("-1 week")|date() %}
+        <li>
+            {{ estimate.ctime|date("d/m/Y") }} : <a href="{{ asset(estimate.pathname) }}" target="blank">{{ estimate.filename }}</a>
+        </li>
+        {% endif %}
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Aucune nouvelle demande de devis</p>
+{% endif %}
+
+<h2>Dernières demandes de partenariat : </h2>
+{% if partners is not empty %}
+    <ul>
+    {% for partner in partners %}
+        {% if partner.ctime|date() > "now"|date_modify("-1 week")|date() %}
+        <li>
+            {{ partner.ctime|date("d/m/Y") }} : <a href="{{ asset(partner.pathname) }}" target="blank">{{ partner.filename }}</a>
+        </li>
+        {% endif %}
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Aucune nouvelle demande de partenariat</p>
+{% endif %}
+
+<h2>Dernières demandes d'informations : </h2>
+{% if contacts is not empty %}
+    <ul>
+    {% for contact in contacts %}
+        {% if contact.ctime|date() > "now"|date_modify("-1 week")|date() %}
+        <li>
+            {{ contact.ctime|date("d/m/Y") }} : <a href="{{ asset(contact.pathname) }}" target="blank">{{ contact.filename }}</a>
+        </li>
+        {% endif %}
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Aucune nouvelle demande d'informations</p>
+{% endif %}
+
+<a href="{{ path('admin_legal') }}">Voir les mentions légales</a>
 {% endblock %}
