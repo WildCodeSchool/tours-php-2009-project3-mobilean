@@ -5,6 +5,7 @@
     box-shadow: 2px 2px 2px gray,
     -1px -1px 2px white;
     background-color: #F2F4F1;
+    font-size: 25px;
 }
 
 .stationpage-title{
@@ -63,4 +64,10 @@
 .station-request-button:hover {
     color: #DCDCDC;
     background-color: #00925b;
+}
+
+@media screen and (min-width: 1024px) {
+    .presentation-text {
+        font-size: 16px;
+    }
 }
