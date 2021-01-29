@@ -5,13 +5,23 @@
 {% block title %}{{ parent() }} - Contact{% endblock %}
 
 {% block body %}
+<h1>Contactez-Nous</h1>
+<hr>
 
-<div id="formContact">
-    <h1>Contactez-Nous</h1>
-    <hr>
-    {{ form_start(form) }}
+{{ form_start(form) }}
+    <div class="row">
+        <div class="col-md-5 offset-1">{{ form_row(form.fullName) }}</div>
+        <div class="col-md-5">{{ form_row(form.businessName) }}</div>
+    </div>
+    <div class="row">
+        <div class="col-md-5 offset-1">{{ form_row(form.email) }}</div>
+        <div class="col-md-5">{{ form_row(form.telephone) }}</div>
+    </div>
+    <div class="row">
+        <div class="col-md-5 offset-1">{{ form_row(form.subject) }}</div>
+        <div class="col-md-5">{{ form_row(form.message) }}</div>
+    </div>
     {{ form_widget(form) }}
-    <button class="btn">Valider</button>
-    {{ form_end(form) }}
-</div>
+    <button class="btn btn-success">Envoyer</button>
+{{ form_end(form) }}
 {% endblock %}
