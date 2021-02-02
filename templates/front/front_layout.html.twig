@@ -52,7 +52,7 @@
         <h3 class="row-footer row justify-content-md-center">Nos partenaires</h3>
         <div class="row-image row justify-content-around">
          {% for partner in partners %}
-            <div class="col">  
+            <div class="col-md-3 offset-1">  
                 <a href="{{ partner.link }}">
                     <img src="/assets/images/uploads/{{ partner.icon }}" alt="logo de {{ partner.name }}" title="{{ partner.name }}">
                 </a>

@@ -1,0 +1,102 @@
+/**
+    For smartphones and tablets 
+*/
+body h1 {
+    font-size: 40px;
+    color:#00925b;
+}
+
+#ourActions h2 {
+    color: rgba(75, 74, 74, 0.767);
+    margin: 50px;
+}
+
+#ourActions ul li{
+    list-style: none;
+    margin : auto;
+    width: 80%;
+    text-align: justify;
+    font-size: 25px;
+}
+
+#ourStory h2 {
+    color: rgba(75, 74, 74, 0.767);
+    margin: 50px;
+}
+
+#ourStory p {
+    margin : auto;
+    width: 80%;
+    text-align: justify;
+    font-size: 25px;
+}
+
+#ourTeam h2 {
+    color: rgba(75, 74, 74, 0.767);
+    margin: 50px;
+}
+
+img {
+    width: 35vw;
+    height: auto;
+}
+
+.teamPictures {
+    text-align: center;
+}
+
+.pictureTeam1 {
+    margin-bottom: 70px;
+}
+
+.pictureTeam2 {
+    margin-bottom: 70px;
+}
+
+figcaption {
+    font-size: 25px;
+}
+
+
+/** 
+    For computers 
+*/
+@media screen and (min-width: 1024px) {
+    #ourActions ul li{
+        font-size: 16px;
+    }
+
+    #ourStory p {
+        font-size: 16px;
+    }
+
+    img {
+        width: auto;
+        height: auto;
+    }
+
+    .teamPictures {
+        display: grid;
+        width: 80%;
+        margin: auto;
+    }
+
+    .pictureTeam1 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    .pictureTeam2 {
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
+
+    .pictureTeam3 {
+        grid-column-start: 5;
+        grid-column-end: 6;
+    }
+
+    figcaption {
+        font-size: 16px;
+    }
+}
