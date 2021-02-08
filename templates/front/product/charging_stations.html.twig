@@ -17,24 +17,48 @@
                 <img class="stations-image" src="/assets/images/uploads/{{refillStation.photo}}" alt="{{refillStation.name}}">
             </div>
             <div>
-                <h3 class="station-details-title">Caractéristiques de la borne</h3>
+                <h3 class="station-details-title">Caractéristiques de la station</h3>
                     <table class="table-show-station table table-hover">
                     <tbody>
                         <tr>
-                            <th scope="col">Débit de borne </th>
-                            <td>{{ refillStation.debit }}</td>
+                            <th scope="col">Débit</th>
+                            <td>
+                            {% if refillStation.debit is not empty %}
+                                {{ refillStation.debit }} m3 / h
+                            {% else %}
+                                Non Renseigné
+                            {% endif %}
+                            </td>
                         </tr>
                         <tr>
                             <th scope="col">Lieu d'installation</th>
-                            <td>{{ refillStation.installation }}</td>
+                            <td>
+                                {% if refillStation.installation is not empty %}
+                                    {{ refillStation.installation }}
+                                {% else %}
+                                    Non Renseigné
+                                {% endif %}
+                            </td>
                         </tr>
                         <tr>
                             <th scope="col">Temps de recharge</th>
-                            <td>{{ refillStation.refillTime}} heures</td>
+                            <td>
+                                {% if refillStation.refillTime is not empty %}
+                                    {{ refillStation.refillTime}} heures
+                                {% else %}
+                                    Non Renseigné
+                                {% endif %}
+                            </td>
                         </tr>
                         <tr>
                             <th scope="col">Stokage supplementaire</th>
-                            <td>{% if refillStation.additionalStorage %}Oui{% else %}Non{% endif%}</td>
+                            <td>
+                                {% if refillStation.additionalStorage is not empty %}
+                                    {% if refillStation.additionalStorage %}Oui{% else %}Non{% endif%}
+                                {% else %}
+                                    Non Renseigné
+                                {% endif %}
+                            </td>
                         </tr>
                     </tbody>
                     </table>
