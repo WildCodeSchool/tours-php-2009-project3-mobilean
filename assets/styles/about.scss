@@ -6,12 +6,12 @@ body h1 {
     color:#00925b;
 }
 
-#ourActions h2 {
+#our-actions h2 {
     color: rgba(75, 74, 74, 0.767);
     margin: 50px;
 }
 
-#ourActions ul li{
+#our-actions ul li{
     list-style: none;
     margin : auto;
     width: 80%;
@@ -19,33 +19,33 @@ body h1 {
     font-size: 25px;
 }
 
-#ourStory h2 {
+#our-story h2 {
     color: rgba(75, 74, 74, 0.767);
     margin: 50px;
 }
 
-#ourStory p {
+#our-story p {
     margin : auto;
     width: 80%;
     text-align: justify;
     font-size: 25px;
 }
 
-#ourTeam h2 {
+#our-team h2 {
     color: rgba(75, 74, 74, 0.767);
     margin: 50px;
 }
 
-img {
+.picture-team {
     width: 35vw;
     height: auto;
 }
 
-.teamPictures {
+.team-pictures-container {
     text-align: center;
 }
 
-.pictureTeam1 {
+.picture-team-1 {
     margin-bottom: 70px;
 }
 
@@ -62,26 +62,26 @@ figcaption {
     For computers 
 */
 @media screen and (min-width: 1024px) {
-    #ourActions ul li{
+    #our-actions ul li{
         font-size: 16px;
     }
 
-    #ourStory p {
+    #our-story p {
         font-size: 16px;
     }
 
-    img {
+    .picture-team {
         width: auto;
         height: auto;
     }
 
-    .teamPictures {
+    .team-pictures-container {
         display: grid;
         width: 80%;
         margin: auto;
     }
 
-    .pictureTeam1 {
+    .picture-team-1 {
         grid-column-start: 1;
         grid-column-end: 2;
     }
