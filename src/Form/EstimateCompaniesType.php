@@ -36,6 +36,7 @@ class EstimateCompaniesType extends AbstractType
 
             ->add('telephone', TelType::class, [
                 'label' => 'Téléphone (10 chiffres sans espaces) : ',
+                'attr' => ['maxlength' => 10],
             ])
 
             ->add('email', EmailType::class, [
