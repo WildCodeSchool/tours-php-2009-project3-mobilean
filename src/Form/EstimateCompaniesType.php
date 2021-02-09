@@ -27,7 +27,7 @@ class EstimateCompaniesType extends AbstractType
             ])
 
             ->add('fullName', TextType::class, [
-                'label' => 'Nom Prénom: ',
+                'label' => 'Nom complet : ',
             ])
 
             ->add('jobTitle', TextType::class, [
@@ -36,6 +36,7 @@ class EstimateCompaniesType extends AbstractType
 
             ->add('telephone', TelType::class, [
                 'label' => 'Téléphone (10 chiffres sans espaces) : ',
+                'attr' => ['maxlength' => 10],
             ])
 
             ->add('email', EmailType::class, [
@@ -64,7 +65,7 @@ class EstimateCompaniesType extends AbstractType
             ])
 
             ->add('numberOfVehicles', IntegerType::class, [
-                'label' => 'Nombre de véhicules dans votre flotte: ',
+                'label' => 'Nombre de véhicules dans votre flotte : ',
             ])
 
             ->add('typeOfVehicles', ChoiceType::class, [
@@ -79,7 +80,7 @@ class EstimateCompaniesType extends AbstractType
             ])
 
             ->add('averageDistance', IntegerType::class, [
-                'label' => 'Kilomètres par an parcourus: ',
+                'label' => 'Kilomètres parcourus par an ? ',
             ])
 
             ->add('message', TextareaType::class, [

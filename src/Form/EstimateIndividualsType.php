@@ -28,6 +28,7 @@ class EstimateIndividualsType extends AbstractType
 
             ->add('telephone', TelType::class, [
                 'label' => 'Téléphone (10 chiffres sans espaces) : ',
+                'attr' => ['maxlength' => 10],
             ])
 
             ->add('email', EmailType::class, [
@@ -70,7 +71,7 @@ class EstimateIndividualsType extends AbstractType
             ])
 
             ->add('averageDistance', IntegerType::class, [
-                'label' => 'Kilomètres par an parcourus : ',
+                'label' => 'Kilomètres parcourus par an ? ',
             ])
 
             ->add('message', TextareaType::class, [
