@@ -14,30 +14,30 @@
     <hr>
     {{ form_start(formCompanies) }}
         <div class="row">
-            <div class="col-md-5 offset-1">{{ form_row(formCompanies.businessName) }}</div>
-            <div class="col-md-5">{{ form_row(formCompanies.numberSIREN) }}</div>
+            <div class="col-10 col-lg-6">{{ form_row(formCompanies.businessName) }}</div>
+            <div class="col-10 col-lg-6">{{ form_row(formCompanies.numberSIREN) }}</div>
         </div>
         <div class="row">
-            <div class="col-md-5 offset-1">{{ form_row(formCompanies.fullName) }}</div>
-            <div class="col-md-5">{{ form_row(formCompanies.jobTitle) }}</div>
+            <div class="col-10 col-lg-6">{{ form_row(formCompanies.fullName) }}</div>
+            <div class="col-10 col-lg-6">{{ form_row(formCompanies.jobTitle) }}</div>
         </div>
         <div class="row">
-            <div class="col-md-5 offset-1">{{ form_row(formCompanies.telephone) }}</div>
-            <div class="col-md-5">{{ form_row(formCompanies.email) }}</div>
+            <div class="col-10 col-lg-6">{{ form_row(formCompanies.telephone) }}</div>
+            <div class="col-10 col-lg-6">{{ form_row(formCompanies.email) }}</div>
         </div>
         <div class="row">
-            <div class="col-md-5 offset-1">{{ form_row(formCompanies.address) }}</div>
-            <div class="col-md-2">{{ form_row(formCompanies.zipCode) }}</div>
-            <div class="col-md-3">{{ form_row(formCompanies.city) }}</div>
+            <div class="col-10 col-lg-6">{{ form_row(formCompanies.address) }}</div>
+            <div class="col-5 col-lg-3">{{ form_row(formCompanies.zipCode) }}</div>
+            <div class="col-5 col-lg-3">{{ form_row(formCompanies.city) }}</div>
         </div>
-        <div class="row">    
-            <div class="col-md-4 offset-1">{{ form_row(formCompanies.typeOfVehicles) }}</div>
-            <div class="col-md-2 offset-1">{{ form_row(formCompanies.numberOfVehicles) }}</div>
-            <div class="col-md-3">{{ form_row(formCompanies.averageDistance) }}</div>
+        <div class="row"> 
+            <div class="col-10 col-lg-6">{{ form_row(formCompanies.typeOfVehicles) }}</div>
+            <div class="col-5 col-lg-3">{{ form_row(formCompanies.numberOfVehicles) }}</div>
+            <div class="col-5 col-lg-3">{{ form_row(formCompanies.averageDistance) }}</div>
         </div>
         <div class="row">
-            <div class="col-md-4 offset-1">{{ form_row(formCompanies.isConnectedToGas) }}</div>    
-            <div class="col-md-5 offset-1">{{ form_row(formCompanies.message) }}</div>
+            <div class="col-10 col-lg-6">{{ form_row(formCompanies.isConnectedToGas) }}</div>    
+            <div class="col-10 col-lg-6">{{ form_row(formCompanies.message) }}</div>
         </div>
         {{ form_widget(formCompanies) }}
         <button class="btn">Valider</button>
@@ -48,26 +48,26 @@
     <hr>
     {{ form_start(formIndividuals) }}
         <div class="row">
-            <div class="col-md-5 offset-1">{{ form_row(formIndividuals.firstName) }}</div>
-            <div class="col-md-5">{{ form_row(formIndividuals.lastName) }}</div>
+            <div class="col-10 col-lg-6">{{ form_row(formIndividuals.firstName) }}</div>
+            <div class="col-10 col-lg-6">{{ form_row(formIndividuals.lastName) }}</div>
         </div>
         <div class="row">
-            <div class="col-md-5 offset-1">{{ form_row(formIndividuals.telephone) }}</div>
-            <div class="col-md-5">{{ form_row(formIndividuals.email) }}</div>
+            <div class="col-10 col-lg-6">{{ form_row(formIndividuals.telephone) }}</div>
+            <div class="col-10 col-lg-6">{{ form_row(formIndividuals.email) }}</div>
         </div>
         <div class="row">
-            <div class="col-md-5 offset-1">{{ form_row(formIndividuals.address) }}</div>
-            <div class="col-md-2">{{ form_row(formIndividuals.zipCode) }}</div>
-            <div class="col-md-3">{{ form_row(formIndividuals.city) }}</div>
+            <div class="col-10 col-lg-6">{{ form_row(formIndividuals.address) }}</div>
+            <div class="col-5 col-lg-3">{{ form_row(formIndividuals.zipCode) }}</div>
+            <div class="col-5 col-lg-3">{{ form_row(formIndividuals.city) }}</div>
         </div>
         <div class="row">
-            <div class="col-md-4 offset-1">{{ form_row(formIndividuals.typeOfVehicles) }}</div>
-            <div class="col-md-2 offset-1">{{ form_row(formIndividuals.numberOfVehicles) }}</div>
-            <div class="col-md-3">{{ form_row(formIndividuals.averageDistance) }}</div>
+            <div class="col-10 col-lg-6">{{ form_row(formIndividuals.typeOfVehicles) }}</div>
+            <div class="col-5 col-lg-3">{{ form_row(formIndividuals.numberOfVehicles) }}</div>
+            <div class="col-5 col-lg-3">{{ form_row(formIndividuals.averageDistance) }}</div>
         </div>
         <div class="row">
-            <div class="col-md-4 offset-1">{{ form_row(formIndividuals.isConnectedToGas) }}</div>
-            <div class="col-md-5 offset-1">{{ form_row(formIndividuals.message) }}</div>
+            <div class="col-10 col-lg-6">{{ form_row(formIndividuals.isConnectedToGas) }}</div>
+            <div class="col-10 col-lg-6">{{ form_row(formIndividuals.message) }}</div>
         </div>    
         
         {{ form_widget(formIndividuals) }}

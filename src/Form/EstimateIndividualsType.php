@@ -52,7 +52,7 @@ class EstimateIndividualsType extends AbstractType
                     'Oui' => true,
                     'Non' => false,
                 ],
-                'label' => 'Votre domicile est-il relié au gaz naturel? ',
+                'label' => 'Votre domicile est-il relié au gaz naturel ? ',
                 'expanded' => true,
             ])
 
@@ -65,18 +65,18 @@ class EstimateIndividualsType extends AbstractType
                     'Véhicules de tourisme' => 'tourismVehicles',
                     'Véhicules utilitaires' => 'commercialVehicles',
                 ],
-                'label' => 'Quel(s) type(s) de véhicule(s) possédez vous? ',
+                'label' => 'Quel(s) type(s) de véhicule(s) possédez vous ? ',
                 'expanded' => true,
                 'multiple' => true,
             ])
 
             ->add('averageDistance', IntegerType::class, [
-                'label' => 'Combien de kilomètres par an parcourent vos véhicules? ',
+                'label' => 'Kilomètres parcourus par an ? ',
             ])
 
             ->add('message', TextareaType::class, [
                 'required' => false,
-                'label' => 'Avez-vous un message à ajouter? ',
+                'label' => 'Avez-vous un message à ajouter ? ',
             ])
         ;
     }
