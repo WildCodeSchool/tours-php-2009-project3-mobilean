@@ -11,16 +11,16 @@
 
     {{ form_start(form) }}
         <div class="row">
-            <div class="col-md-5 offset-1">{{ form_row(form.fullName) }}</div>
-            <div class="col-md-5">{{ form_row(form.businessName) }}</div>
+            <div class="col-10 col-lg-6">{{ form_row(form.fullName) }}</div>
+            <div class="col-10 col-lg-6">{{ form_row(form.businessName) }}</div>
         </div>
         <div class="row">
-            <div class="col-md-5 offset-1">{{ form_row(form.email) }}</div>
-            <div class="col-md-5">{{ form_row(form.telephone) }}</div>
+            <div class="col-10 col-lg-6">{{ form_row(form.email) }}</div>
+            <div class="col-10 col-lg-6">{{ form_row(form.telephone) }}</div>
         </div>
         <div class="row">
-            <div class="col-md-5 offset-1">{{ form_row(form.subject) }}</div>
-            <div class="col-md-5">{{ form_row(form.message) }}</div>
+            <div class="col-10 col-lg-6">{{ form_row(form.subject) }}</div>
+            <div class="col-10 col-lg-6">{{ form_row(form.message) }}</div>
         </div>
         {{ form_widget(form) }}
         <button class="btn btn-success">Envoyer</button>

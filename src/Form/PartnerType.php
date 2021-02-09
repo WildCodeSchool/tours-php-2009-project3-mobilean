@@ -43,19 +43,19 @@ class PartnerType extends AbstractType
             ])
 
             ->add('fullName', TextType::class, [
-                'label' => 'Nom complet de la personne à contacter : ',
+                'label' => 'Nom Prénom : ',
             ])
 
             ->add('jobTitle', TextType::class, [
-                'label' => 'Fonction de la personne à contacter : ',
+                'label' => 'Fonction : ',
             ])
 
             ->add('telephone', TelType::class, [
-                'label' => 'Téléphone de la personne à contacter (10 chiffres sans espaces) : ',
+                'label' => 'Téléphone (10 chiffres sans espaces) : ',
             ])
 
             ->add('email', EmailType::class, [
-                'label' => 'Email de la personne à contacter : ',
+                'label' => 'Email : ',
             ])
 
             ->add('address', TextType::class, [
@@ -76,7 +76,7 @@ class PartnerType extends AbstractType
 
             ->add('message', TextareaType::class, [
                 'required' => false,
-                'label' => 'Avez-vous un message à ajouter? ',
+                'label' => 'Avez-vous un message à ajouter ? ',
             ])
         ;
     }
