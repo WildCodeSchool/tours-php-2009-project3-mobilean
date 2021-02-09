@@ -127,7 +127,7 @@ class EstimateCompanies
      * @Assert\NotBlank(message="Veuillez renseigner ce champ")
      * @Assert\Count(
      *      min=1,
-     *      max=2,
+     *      max=3,
      *      minMessage="Veuillez selectionner au moins {{ limit }} option",
      *      maxMessage="Veuillez selectionner au plus {{ limit }} options",
      * )
