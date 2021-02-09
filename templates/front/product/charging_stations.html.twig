@@ -9,37 +9,41 @@
         Faire le plein de Gaz Naturel n'a jamais été aussi facile grâce à la borne de recharge installée à domicile ou sur le lieu de travail.
         Une fois connectée sur votre réseau domestique, la borne de recharge vous permet ravitailler votre véhicule : la nuit suffit à faire le plein !
     </p>
+    <div class="row justify-content-around">
     {% for refillStation in refillStations %}
-        <h2 class="station-title">{{refillStation.name}}</h2>
-        <p class="station-description">{{ refillStation.description }}</p>
-        <div class="station-block">
-            <div>
-                <img class="stations-image" src="/assets/images/uploads/{{refillStation.photo}}" alt="{{refillStation.name}}">
-            </div>
-            <div>
-                <h3 class="station-details-title">Caractéristiques de la borne</h3>
-                    <table class="table-show-station table table-hover">
-                    <tbody>
-                        <tr>
-                            <th scope="col">Débit de borne </th>
-                            <td>{{ refillStation.debit }}</td>
-                        </tr>
-                        <tr>
-                            <th scope="col">Lieu d'installation</th>
-                            <td>{{ refillStation.installation }}</td>
-                        </tr>
-                        <tr>
-                            <th scope="col">Temps de recharge</th>
-                            <td>{{ refillStation.refillTime}} heures</td>
-                        </tr>
-                        <tr>
-                            <th scope="col">Stokage supplementaire</th>
-                            <td>{% if refillStation.additionalStorage %}Oui{% else %}Non{% endif%}</td>
-                        </tr>
-                    </tbody>
-                    </table>
-                    <a href="{{path('contact_estimate')}}"><input class="station-request-button" type="button" value="Demande de devis"></a>
+        <div class="col-6">
+            <h2 class="station-title">{{refillStation.name}}</h2>
+            <p class="station-description">{{ refillStation.description }}</p>
+            <div class="station-block">
+                <div class="station-img">
+                    <img class="d-block w-100" src="/assets/images/uploads/{{refillStation.photo}}" alt="{{refillStation.name}}">
+                </div>
+                <div>
+                    <h3 class="station-details-title">Caractéristiques de la borne</h3>
+                        <table class="station-table table table-hover">
+                        <tbody>
+                            <tr>
+                                <th scope="col">Débit de borne </th>
+                                <td>{{ refillStation.debit }}</td>
+                            </tr>
+                            <tr>
+                                <th scope="col">Lieu d'installation</th>
+                                <td>{{ refillStation.installation }}</td>
+                            </tr>
+                            <tr>
+                                <th scope="col">Temps de recharge</th>
+                                <td>{{ refillStation.refillTime}} heures</td>
+                            </tr>
+                            <tr>
+                                <th scope="col">Stokage supplementaire</th>
+                                <td>{% if refillStation.additionalStorage %}Oui{% else %}Non{% endif%}</td>
+                            </tr>
+                        </tbody>
+                        </table>
+                        <a href="{{path('contact_estimate')}}"><input class="station-request-button" type="button" value="Demande de devis"></a>
+                </div>
             </div>
         </div>
     {% endfor %}
+    </div>
 {% endblock %}

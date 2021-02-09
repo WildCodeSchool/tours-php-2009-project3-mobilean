@@ -22,6 +22,10 @@ main {
     min-height: 100vh;
 }
 
+a:hover {
+    text-decoration: none;
+}
+
 /*Form connexion*/
 .form-login {
     width: 100%;
