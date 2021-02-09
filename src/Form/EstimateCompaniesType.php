@@ -27,15 +27,16 @@ class EstimateCompaniesType extends AbstractType
             ])
 
             ->add('fullName', TextType::class, [
-                'label' => 'Nom complet de la personne à contacter : ',
+                'label' => 'Nom complet : ',
             ])
 
             ->add('jobTitle', TextType::class, [
-                'label' => 'Fonction de la personne à contacter : ',
+                'label' => 'Fonction : ',
             ])
 
             ->add('telephone', TelType::class, [
                 'label' => 'Téléphone (10 chiffres sans espaces) : ',
+                'attr' => ['maxlength' => 10],
             ])
 
             ->add('email', EmailType::class, [
@@ -64,13 +65,13 @@ class EstimateCompaniesType extends AbstractType
             ])
 
             ->add('numberOfVehicles', IntegerType::class, [
-                'label' => 'Nombre approximatif de véhicules dans votre flotte : ',
+                'label' => 'Nombre de véhicules dans votre flotte : ',
             ])
 
             ->add('typeOfVehicles', ChoiceType::class, [
                 'choices' => [
-                    'Véhicules utilitaires' => 'commercialVehicles',
                     'Véhicules de tourisme' => 'tourismVehicles',
+                    'Véhicules utilitaires' => 'commercialVehicles',
                     'Camions poids lourd' => 'heavyTrucks',
                 ],
                 'label' => 'Quel(s) type(s) de véhicule(s) possédez vous? ',
@@ -79,7 +80,7 @@ class EstimateCompaniesType extends AbstractType
             ])
 
             ->add('averageDistance', IntegerType::class, [
-                'label' => 'En moyenne, combien de kilomètres par an parcourent vos véhicules? ',
+                'label' => 'Combien de kilomètres par an parcourent vos véhicules? ',
             ])
 
             ->add('message', TextareaType::class, [

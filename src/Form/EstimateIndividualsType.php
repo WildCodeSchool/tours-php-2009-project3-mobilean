@@ -28,6 +28,7 @@ class EstimateIndividualsType extends AbstractType
 
             ->add('telephone', TelType::class, [
                 'label' => 'Téléphone (10 chiffres sans espaces) : ',
+                'attr' => ['maxlength' => 10],
             ])
 
             ->add('email', EmailType::class, [
@@ -61,8 +62,8 @@ class EstimateIndividualsType extends AbstractType
 
             ->add('typeOfVehicles', ChoiceType::class, [
                 'choices' => [
-                    'Véhicules utilitaires' => 'commercialVehicles',
                     'Véhicules de tourisme' => 'tourismVehicles',
+                    'Véhicules utilitaires' => 'commercialVehicles',
                 ],
                 'label' => 'Quel(s) type(s) de véhicule(s) possédez vous? ',
                 'expanded' => true,
@@ -70,7 +71,7 @@ class EstimateIndividualsType extends AbstractType
             ])
 
             ->add('averageDistance', IntegerType::class, [
-                'label' => 'En moyenne, combien de kilomètres par an parcourent vos véhicules? ',
+                'label' => 'Combien de kilomètres par an parcourent vos véhicules? ',
             ])
 
             ->add('message', TextareaType::class, [

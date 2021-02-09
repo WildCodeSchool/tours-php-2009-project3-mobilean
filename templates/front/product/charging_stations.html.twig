@@ -11,39 +11,63 @@
     </p>
     <div class="row justify-content-around">
     {% for refillStation in refillStations %}
-        <div class="col-6">
-            <h2 class="station-title">{{refillStation.name}}</h2>
-            <p class="station-description">{{ refillStation.description }}</p>
-            <div class="station-block">
-                <div class="station-img">
+    <div class="col-6">
+        <h2 class="station-title">{{refillStation.name}}</h2>
+        <p class="station-description">{{ refillStation.description }}</p>
+        <div class="station-block">
+            <div class="station-img">
                     <img class="d-block w-100" src="/assets/images/uploads/{{refillStation.photo}}" alt="{{refillStation.name}}">
-                </div>
-                <div>
-                    <h3 class="station-details-title">Caractéristiques de la borne</h3>
-                        <table class="station-table table table-hover">
-                        <tbody>
-                            <tr>
-                                <th scope="col">Débit de borne </th>
-                                <td>{{ refillStation.debit }}</td>
-                            </tr>
-                            <tr>
-                                <th scope="col">Lieu d'installation</th>
-                                <td>{{ refillStation.installation }}</td>
-                            </tr>
-                            <tr>
-                                <th scope="col">Temps de recharge</th>
-                                <td>{{ refillStation.refillTime}} heures</td>
-                            </tr>
-                            <tr>
-                                <th scope="col">Stokage supplementaire</th>
-                                <td>{% if refillStation.additionalStorage %}Oui{% else %}Non{% endif%}</td>
-                            </tr>
-                        </tbody>
-                        </table>
-                        <a href="{{path('contact_estimate')}}"><input class="station-request-button" type="button" value="Demande de devis"></a>
-                </div>
+            </div>
+            <div>
+                <h3 class="station-details-title">Caractéristiques de la station</h3>
+                    <table class="station-table table table-hover">
+                    <tbody>
+                        <tr>
+                            <th scope="col">Débit</th>
+                            <td>
+                            {% if refillStation.debit is not empty %}
+                                {{ refillStation.debit }} m3 / h
+                            {% else %}
+                                Non Renseigné
+                            {% endif %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="col">Lieu d'installation</th>
+                            <td>
+                                {% if refillStation.installation is not empty %}
+                                    {{ refillStation.installation }}
+                                {% else %}
+                                    Non Renseigné
+                                {% endif %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="col">Temps de recharge</th>
+                            <td>
+                                {% if refillStation.refillTime is not empty %}
+                                    {{ refillStation.refillTime}} heures
+                                {% else %}
+                                    Non Renseigné
+                                {% endif %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="col">Stokage supplementaire</th>
+                            <td>
+                                {% if refillStation.additionalStorage is not empty %}
+                                    {% if refillStation.additionalStorage %}Oui{% else %}Non{% endif%}
+                                {% else %}
+                                    Non Renseigné
+                                {% endif %}
+                            </td>
+                        </tr>
+                    </tbody>
+                    </table>
+                    <a href="{{path('contact_estimate')}}"><input class="station-request-button" type="button" value="Demande de devis"></a>
             </div>
         </div>
+    </div>
     {% endfor %}
     </div>
 {% endblock %}
