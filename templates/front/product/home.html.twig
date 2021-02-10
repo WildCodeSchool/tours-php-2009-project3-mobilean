@@ -5,27 +5,33 @@
 {% block title %}Accueil - {{ parent() }} {% endblock %}
 
 {% block body %}
-
     <section class="presentation-rental">
-        <div> 
-            <h2 class="Offerpresentation">Nos offres clé en main en location longue durée</h2>
-            <hr>
+        <h2 class="Offerpresentation">Nos offres clé en main en location longue durée</h2>
+        <hr>
+        <div class="vehicle-lg">
             <ul class="vehicle-list">
-                <li class="vehicle-detail-left"><img src="/assets/images/car.png" class="" alt="picture car"></li>
-                <li class="vehicle-detail-right"><img src="/assets/images/petrol.png" class="" alt="picture refillstation"></li>
-                <li class="vehicle-detail-left" id="vehicle-right">Un véhicule particulier ou utilitaire :</li>
-                <li class="vehicle-detail-right" id="vehicle-left">Une station de recharge :</li>
-                <li class="vehicle-detail-left">équipé d'origine au GNV avec garantie constructeur</li>
-                <li class="vehicle-detail-right">installée sur votre réseau de Gaz Naturel domestique</li>
+                <li class="vehicle-detail-left vehicle-image"><img src="/assets/images/carLeaves.jpg" class="car-leaves" alt="picture car"></li>
+                <li class="vehicle-detail-left" >Un véhicule particulier ou utilitaire :</li>
+                <li class="vehicle-detail-left">équipé d'origine au GNV <br>avec garantie constructeur</li>
+            </ul>
+            <ul class="vehicle-list">
+                <li class="vehicle-detail-center vehicle-image"><img src="/assets/images/stationGas.png" class="refillstation-picture" alt="picture refillstation"></li>
+                <li class="vehicle-detail-center">Une station de recharge :</li>
+                <li class="vehicle-detail-center">installée sur votre réseau <br>de Gaz Naturel domestique</li>
             </ul>
         </div>
+            <ul class="vehicle-list-gas">
+                <li class="vehicle-detail-right vehicle-image"><img src="/assets/images/greengas.png" class="picturegas" alt="picture car"></li>
+                <li class="vehicle-detail-right">Du gaz vert : </li>
+                <li class="vehicle-detail-right">méthane ou bio-méthane</li>
+            </ul>
     </section>
 
     <section class="presentation-container">
         <div class="presentation-first-text">
             <h2>Pourquoi rouler au GNV et Bio-GNV  ?</h2>
             <hr>
-            <p >
+            <p>
                 L'hydrocarbure renouvelable le plus simple à bio-synthétiser
                 Le GNV (Gaz Naturel pour Véhicules) est un carburant alternatif à l’essence et au diesel pour les véhicules thermiques.
                 Il est principalement constitué de méthane.
@@ -34,7 +40,7 @@
                 Chez Mobilean, on parle de Gaz Vert pour Véhicules®.
             </p>
         </div>
-        <img src="/assets/images/carLeaves.jpg" class="presentation-picture" alt="picture car"></li>    
+        <img src="/assets/images/leaves.jpg" class="presentation-picture" alt="picture car"></li>   
     </section>
 
     <section class="presentation-container">
@@ -66,7 +72,7 @@
                 {% for vehicle in commercialVehicles %}
                     <div class="carousel-item {{ loop.first ? 'active': '' }}">
                         <h4>{{ vehicle.name }}</h4>
-                        <a href="{{ path('product_vehicle', { id : vehicle.id }) }}"><img class="d-block w-100" src=" /assets/images/uploads/{{ vehicle.photo }}" alt="Photo du véhicule"></a>
+                        <a class="carousel-link" href="{{ path('product_vehicle', { id : vehicle.id }) }}"><img class="carousel-picture" src=" /assets/images/uploads/{{ vehicle.photo }}" alt="Photo du véhicule"></a>
                     </div>
                 {% endfor %}
             </div>
@@ -94,7 +100,7 @@
                 {% for vehicle in tourismVehicles %}
                     <div class="carousel-item {{ loop.first ? 'active': '' }} ">
                         <h4>{{ vehicle.name }}</h4>
-                        <a href="{{ path('product_vehicle', { id : vehicle.id }) }}"><img class="d-block w-100" src=" /assets/images/uploads/{{ vehicle.photo }}" alt="Photo du véhicule"></a>
+                        <a class="carousel-link" href="{{ path('product_vehicle', { id : vehicle.id }) }}"><img class="carousel-picture" src=" /assets/images/uploads/{{ vehicle.photo }}" alt="Photo du véhicule"></a>
                     </div>
                 {% endfor %}
             </div>

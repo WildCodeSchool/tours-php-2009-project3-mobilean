@@ -5,22 +5,6 @@
 {% block title %}vehicle - {{ parent() }} {{ vehicle.id }}{% endblock %}
 
 {% block body %}
-
-    <section class="presentation-rental">
-        <div> 
-            <h2 class="Offerpresentation">Nos offres clé en main en location longue durée</h2>
-            <hr>
-            <ul class="vehicle-list">
-                <li class="vehicle-detail-left"><img src="/assets/images/car.png" class="" alt="picture car"></li>
-                <li class="vehicle-detail-right"><img src="/assets/images/petrol.png" class="" alt="picture refillstation"></li>
-                <li class="vehicle-detail-left" id="vehicle-right">Un véhicule :</li> 
-                <li class="vehicle-detail-right" id="vehicle-left">Une borne de recharge :</li>
-                <li class="vehicle-detail-left">équipé d'origine au GNV par le constructeur</li>
-                <li class="vehicle-detail-right">installée sur votre réseau de Gaz Naturel domestique</li>
-            </ul>
-        </div>
-   </section>
-
     <section>
         <h2 id="vehicle-title">{{ vehicle.name }}</h2>
         <hr>
