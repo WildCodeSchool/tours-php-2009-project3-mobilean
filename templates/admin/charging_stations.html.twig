@@ -22,9 +22,9 @@
             <tr>
                 <td>{{ refillStation.name }}</td>
                 <td>{{ refillStation.description }}</td>
-                <td>{{ refillStation.debit }}</td>
+                <td>{{ refillStation.debit }} m3 / h</td>
                 <td>{{ refillStation.installation }}</td>
-                <td>{{ refillStation.refillTime }}</td>
+                <td>{{ refillStation.refillTime }} h</td>
                 <td>
                     <a class="btn btn-outline-info" href="{{ path('admin_charging_station_show', {'id': refillStation.id}) }}" roles="button">Details</a>
                     <a class="btn btn-outline-info" href="{{ path('admin_charging_station_edit', {'id': refillStation.id}) }}" roles="button">Modifier</a>
