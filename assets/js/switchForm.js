@@ -19,3 +19,11 @@ function particularFunction() {
     }
 }
 document.getElementById('switchParticular').addEventListener('click', particularFunction, false);
+
+const particular = document.getElementById('formParticular');
+const company = document.getElementById('formCompany');
+
+if (particular.outerHTML.includes('invalid-feedback')) {
+    company.style.display = 'none';
+    particular.style.display = 'block';
+}
