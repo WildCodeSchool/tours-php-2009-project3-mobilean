@@ -41,7 +41,7 @@ class VehicleType extends AbstractType
             ])
 
             ->add('actualPower', IntegerType::class, [
-                'label' => 'Puissance réelle (ch : ',
+                'label' => 'Puissance réelle (ch) : ',
                 'required' => false,
             ])
 
