@@ -23,3 +23,24 @@
 #formPartner h1 {
     color:#00925b;
 }
+
+.required {
+    font-size: 25px;
+}
+
+label {
+    font-size: 25px;
+}
+
+/** 
+    For computers 
+*/
+@media screen and (min-width: 1024px) {
+    .required {
+        font-size: 16px;
+    }
+
+    label {
+        font-size: 16px;
+    }
+}

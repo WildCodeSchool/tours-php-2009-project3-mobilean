@@ -1,9 +1,9 @@
 {% extends 'admin/admin_layout.html.twig' %}
 
-{% block title %}{{ parent() }} - Admin - Borne de recharge{% endblock %}
+{% block title %}{{ parent() }} - Admin - Station de recharge{% endblock %}
 
 {% block body %}
-    <h1>Borne de recharge</h1>
+    <h1>Station de recharge</h1>
 
     <table class="table-show-refill table table-hover">
         <tbody>
@@ -21,7 +21,7 @@
             </tr>
             <tr>
                 <th scope="col">Debit</th>
-                <td>{{ refillStation.debit }}</td>
+                <td>{{ refillStation.debit }} m3 / h</td>
             </tr>
             <tr>
                 <th scope="col">Installation</th>
@@ -29,7 +29,7 @@
             </tr>
             <tr>
                 <th scope="col">Temps de recharge</th>
-                <td>{{ refillStation.refillTime }}</td>
+                <td>{{ refillStation.refillTime }} h</td>
             </tr>
             <tr>
                 <th scope="col">Stockage supplémentaire</th>

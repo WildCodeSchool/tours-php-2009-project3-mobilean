@@ -27,7 +27,7 @@ class RefillStationType extends AbstractType
             ])
 
             ->add('debit', IntegerType::class, [
-                'label' => 'Débit de la borne : ',
+                'label' => 'Débit de la borne (m3/h) : ',
                 'required' => false,
             ])
 
@@ -43,7 +43,7 @@ class RefillStationType extends AbstractType
             ])
 
             ->add('refillTime', IntegerType::class, [
-                'label' => 'Temps de recharge : ',
+                'label' => 'Temps de recharge (h) : ',
                 'required' => false,
             ])
 

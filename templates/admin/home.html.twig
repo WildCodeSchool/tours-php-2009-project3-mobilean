@@ -7,7 +7,7 @@
 {% block body %}
 <h1>Accueil</h1>
 
-<h2>Dernières demandes de devis : </h2>
+<h2>Demandes de devis des 7 derniers jours : </h2>
 {% if estimates is not empty %}
     <ul>
     {% for estimate in estimates %}
@@ -22,7 +22,7 @@
     <p>Aucune nouvelle demande de devis</p>
 {% endif %}
 
-<h2>Dernières demandes de partenariat : </h2>
+<h2>Demandes de partenariat des 7 derniers jours : </h2>
 {% if partners is not empty %}
     <ul>
     {% for partner in partners %}
@@ -37,7 +37,7 @@
     <p>Aucune nouvelle demande de partenariat</p>
 {% endif %}
 
-<h2>Dernières demandes d'informations : </h2>
+<h2>Demandes d'informations des 7 derniers jours : </h2>
 {% if contacts is not empty %}
     <ul>
     {% for contact in contacts %}

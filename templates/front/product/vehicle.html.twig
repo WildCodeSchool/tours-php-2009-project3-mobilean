@@ -5,29 +5,13 @@
 {% block title %}vehicle - {{ parent() }} {{ vehicle.id }}{% endblock %}
 
 {% block body %}
-
-    <section class="presentation-rental">
-        <div> 
-            <h2 class="Offerpresentation">Nos offres clé en main en location longue durée</h2>
-            <hr>
-            <ul class="vehicle-list">
-                <li class="vehicle-detail-left"><img src="/assets/images/car.png" class="" alt="picture car"></li>
-                <li class="vehicle-detail-right"><img src="/assets/images/petrol.png" class="" alt="picture refillstation"></li>
-                <li class="vehicle-detail-left" id="vehicle-right">Un véhicule :</li> 
-                <li class="vehicle-detail-right" id="vehicle-left">Une borne de recharge :</li>
-                <li class="vehicle-detail-left">équipé d'origine au GNV par le constructeur</li>
-                <li class="vehicle-detail-right">installée sur votre réseau de Gaz Naturel domestique</li>
-            </ul>
-        </div>
-   </section>
-
     <section>
         <h2 id="vehicle-title">{{ vehicle.name }}</h2>
         <hr>
         <div class="vehicle-description">
-            <img class= "vehicle-picture d-block w-100" src=" /assets/images/uploads/{{ vehicle.photo }}" alt="Photo du véhicule"> 
-            <div class="vehicule-details">
-                <h3 class="vehicule-details-title">Caractéristiques du véhicule</h3>
+            <img class= "vehicle-picture" src=" /assets/images/uploads/{{ vehicle.photo }}" alt="Photo du véhicule"> 
+            <div class="vehicle-details">
+                <h3 class="vehicle-details-title">Caractéristiques du véhicule</h3>
                     <table class="table-show-vehicle table table-hover">
                         <tbody>
                             <tr>
@@ -40,36 +24,80 @@
                             </tr>
                             <tr>
                                 <th scope="col">Puissance fiscale</th>
-                                <td>{{ vehicle.fiscalPower }}</td>
+                                <td>
+                                    {% if vehicle.fiscalPower is not empty %}
+                                        {{ vehicle.fiscalPower }} ch
+                                    {% else %}
+                                        Non Renseigné
+                                    {% endif %}
+                                </td>
                             </tr>
                             <tr>
                                 <th scope="col">Puissance réelle</th>
-                                <td>{{ vehicle.actualPower }}</td>
+                                <td>
+                                    {% if vehicle.actualPower is not empty %}
+                                        {{ vehicle.actualPower }} ch
+                                    {% else %}
+                                        Non Renseigné
+                                    {% endif %}
+                                </td>
                             </tr>
                             <tr>
                                 <th scope="col">Capacité réservoir GNV</th>
-                                <td>{{ vehicle.tankCapacityCNG }}</td>
+                                <td>
+                                    {% if vehicle.tankCapacityCNG is not empty %}
+                                        {{ vehicle.tankCapacityCNG }} kg
+                                    {% else %}
+                                        Non Renseigné
+                                    {% endif %}
+                                </td>
                             </tr>
                             <tr>
                                 <th scope="col">Consommation GNV</th>
-                                <td>{{ vehicle.consumptionCNG }}</td>
+                                <td>
+                                    {% if vehicle.consumptionCNG is not empty %}
+                                        {{ vehicle.consumptionCNG }} kg / 100km
+                                    {% else %}
+                                        Non Renseigné
+                                    {% endif %}
+                                </td>
                             </tr>
                             <tr>
                                 <th scope="col">Capacité carburant</th>
-                                <td>{{ vehicle.tankCapacityFuel }}</td>
+                                <td>
+                                    {% if vehicle.tankCapacityFuel is not empty %}
+                                        {{ vehicle.tankCapacityFuel }} L
+                                    {% else %}
+                                        Non Renseigné
+                                    {% endif %}
+                                </td>
                             </tr>
                             <tr>
                                 <th scope="col">Consommation carburant</th>
-                                <td>{{ vehicle.consumptionFuel }}</td>
+                                <td>
+                                    {% if vehicle.consumptionFuel is not empty %}
+                                        {{ vehicle.consumptionFuel }} L / 100km
+                                    {% else %}
+                                        Non Renseigné
+                                    {% endif %}
+                                </td>
                             </tr>
                             <tr>
                                 <th scope="col">Autonomie</th>
-                                <td>{{ vehicle.autonomy }}</td>
+                                <td>
+                                    {% if vehicle.autonomy is not empty %}
+                                        {{ vehicle.autonomy }} km
+                                    {% else %}
+                                        Non Renseigné
+                                    {% endif %}
+                                </td>
                             </tr>
-                            <tr>
-                                <th scope="col">Vol.compartiment arrière</th>
-                                <td>{{ vehicle.rearVolume }}</td>
-                            </tr>
+                            {% if vehicle.rearVolume is not empty %}
+                                <tr>
+                                    <th scope="col">Vol.compartiment arrière</th>
+                                    <td>{{ vehicle.rearVolume }} m3</td>
+                                </tr>
+                            {% endif %}
                         </tbody>
                         <tfoot>
                             <th>
