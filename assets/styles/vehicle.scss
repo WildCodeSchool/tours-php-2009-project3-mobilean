@@ -9,16 +9,19 @@
 }
 
 .vehicle-description {
-    padding-top: 20px;
+    margin-top: 50px;
+    width: 100%;
+    height: auto;
+    align-items: center;
 }
 
-.vehicle-picture{
+.vehicle-picture {
     border: 2px solid #BDC1BC;
     border-radius: 10px;
-    box-shadow: 2px 2px 2px gray,
-    -1px -1px 2px white;
-    background-color: #F2F4F1;
-    height: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    margin: 20px 0;
 }
 
 .vehicule-details-title {
@@ -34,7 +37,6 @@
     border-radius: 10px;
     box-shadow: 2px 2px 2px gray,
     -1px -1px 2px white;
-    background-color: #F2F4F1;
     padding-bottom: 20px;
     margin: auto;
 }
@@ -60,46 +62,11 @@
     For computers 
 */
 @media screen and (min-width: 1024px) {
-    .vehicle-picture{
-        border: 2px solid #BDC1BC;
-        border-radius: 10px;
-        box-shadow: 2px 2px 2px gray,
-        -1px -1px 2px white;
-        background-color: #F2F4F1;
-        width: 50vw;
-        height: auto;
-        margin: auto;
-    }
-
-    .vehicule-details {
-        border: 2px solid #BDC1BC;
-        margin-top: 50px;
-        border-radius: 10px;
-        box-shadow: 2px 2px 2px gray,
-        -1px -1px 2px white;
-        background-color: #F2F4F1;
-        padding-bottom: 20px;
-        width:50vw;
-        height: auto;
-    }
-
     .vehicle-description {
         margin: auto;
         width: 70%;
         padding-top: 20px;
     }
-
-    .vehicule-details {
-        border: 2px solid #BDC1BC;
-        margin-top: 50px;
-        border-radius: 10px;
-        box-shadow: 2px 2px 2px gray,
-        -1px -1px 2px white;
-        background-color: #F2F4F1;
-        padding-bottom: 20px;
-        width:50vw;
-    }
-
     .vehicule-detail {
         list-style: none;
         margin-left: 10vw;
